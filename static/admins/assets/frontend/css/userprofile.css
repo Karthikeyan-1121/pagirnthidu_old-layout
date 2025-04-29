@@ -1,0 +1,117 @@
+.userprofile{}
+.userprofile p{color: #29323D; font-size: 16px; font-family: 'Lato';}
+.userprofile .button {
+  background: #FE6401 !important;
+  border-radius: 8px;
+  padding: 15px 25px;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  cursor: pointer; width: 100%;font-family: 'Lato'; font-size: 18px;
+  box-shadow:0px 2px 5px rgb(0,0,0,0.5); margin: auto; border: 0px;
+}
+
+.disabled {
+  display:none;
+}
+
+.userprofile h4{font-family: 'Lato'; font-size: 20px; line-height: 0px; color: #29323D; font-weight: 700; text-align: center;}
+.userprofile .subtxt{font-family: 'Lato'; font-size: 16px; color: #5C6570; text-align: center; line-height: 20px; margin-bottom: 20px;}
+
+.userprofile section {
+  padding: 30px ;
+  max-width: 300px;
+  margin: 30px auto;
+  background:white;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(10px);
+  box-shadow:0px 2px 10px rgba(0,0,0,0.3);
+  border-radius:5px;
+  transition:transform 0.2s ease-in-out; font-family: 'Lato'; font-size: 14px;
+}
+
+
+.userprofile input {
+  width: 100%;
+  margin: 7px 0px;
+  display: inline-block;
+  padding: 12px 25px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 1em;
+  font-family:inherit;
+  background:white; color: #29323D;
+}
+
+.userprofile input::placeholder{color: #29323D;}
+.userprofile input[type='date']{color: #29323D;}
+.userprofile input[type='checkbox']{width: auto; margin-right: 5px; color: #2F435A; margin-bottom: 15px; margin-left: 11px;}
+.userprofile .userpurpose label{width: auto; display: inline;}
+.userprofile .userinterest label{width: auto; display: inline;}
+
+input[type=checkbox] + label {
+  color: #29323D;
+} 
+
+input[type=checkbox]:checked{
+    accent-color: #6FB917; 
+}
+
+input[type=checkbox]:checked + label {
+  font-style: normal;
+} 
+
+.ml15{margin-left: 15px !important;}
+.mlr5{margin-right: 15px !important;}
+
+.userprofile .steptxt{font-family: 'Lato'; font-size: 14px; text-align: center; color: #2F435A;}
+
+#multi-step-form-container {
+    margin-top: 5rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.userprofile .txtcen{text-align: center;}
+
+.submit-btn {
+    border: 1px solid #0e9594;
+    background-color: #0e9594;
+}
+.mt-3 {
+    margin-top: 2rem;
+}
+.d-none {
+    display: none;
+}
+.disp-fx{display: flex;}
+.form-step {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 3rem;
+}
+.userprofile label{display:block; color: #29323D; margin-top: 15px;}
+.userprofile select{display: block; width: 100%;
+  margin: 7px 0px;
+  display: inline-block;
+  padding: 12px 25px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 1em;
+  font-family:inherit;
+  background:white; color: #29323D;}
+
+
+ select:required:invalid {
+  color: #29323D; opacity: 0.5;
+}
+ option[value=""][disabled] {
+  display: none;
+}
+ option {
+  color: #29323D;

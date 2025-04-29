@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en_GB" dir="ltr">
+
+<!-- head -->
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="csrf-token" content="8xfNEyJT30kIl6CciEHvbbieJXAgPMH5M8r2rszy">
+   <meta name="description" content="this is multilingual example meta tag for english">
+   <meta name="tags" content="hello,meta,tag">
+   <link rel="shortcut icon" href="/static/web/assets/uploads/media-uploader/favicon1698602001.png" type="image/png">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/line-awesome.min.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/fontawesome.min.css">
+   <link rel="stylesheet" href="/static/web/assets/common/css/font-awesome.min.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/owltheme-defaults.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/animate.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/flaticon.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/magnific-popup.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/popup-lightbox.css" />
+   <!-- <link rel="stylesheet" href="/static/assets/backend/css/nice-select.css"> -->
+   <link rel="stylesheet" href="/static/web/assets/common/css/toastr.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/slick.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/style.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/style_02.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/faqaccordion.css/">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/responsive.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/jquery.ihavecookies.css/">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/dynamic-style.css">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" />
+   <link rel="stylesheet" type="text/css"
+      href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" />
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+   <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+   <script src="/static/web/assets/frontend/js/jquery-3.4.1.min.js"></script>
+
+   <script src="/static/web/assets/frontend/js/jquery.dataTables.min.js"></script>
+
+   <style>
+      :root {
+         --main-color-one: #4a90e2;
+         --main-color-two: #1a191f;
+         --portfolio-color: ;
+         --logistic-color: ;
+         --industry-color: ;
+         --secondary-color: #00bdc0;
+         --heading-color: #2b2a35;
+         --paragraph-color: #616161;
+         --construction-color: ;
+         --heading-font: "Advent Pro", sans-serif;
+         --body-font: "Roboto", sans-serif;
+      }
+   </style>
+   <style>
+      /* Add padding to avoid content being hidden */
+      body {
+         padding-top: 80px;
+         /* Height of fixed-top navbar */
+         padding-bottom: 60px;
+         /* Height of fixed-bottom navbar if used */
+      }
+
+      /* Ensure file input label adapts to the selected file */
+      .custom-file-input:lang(en)~.custom-file-label::after {
+         content: "Change";
+         /* Custom text when file is selected */
+      }
+
+      .fixed-left-button {
+         position: fixed;
+         left: 10px;
+         /* Adjust for margin */
+         bottom: 20px;
+         /* Position at bottom-left */
+         z-index: 1050;
+         /* Ensure it stays above content */
+      }
+
+      .td-limit {
+         max-width: 70px;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         overflow: hidden;
+      }
+
+      /* Display the selected file name */
+      #fileName {
+         margin-top: 5px;
+         color: #6c757d;
+         font-size: 14px;
+      }
+
+      .form-group {
+         margin-bottom: 5px;
+         /* Reduced margin between form fields */
+      }
+
+      .text-danger {
+         font-size: 0.75rem;
+         /* Smaller font size */
+         color: #e74c3c;
+         /* Red color for errors */
+         margin-top: 3px;
+         font-weight: 400;
+      }
+
+      .required {
+         color: #e74c3c;
+         ;
+      }
+
+      .form-group input:focus:invalid {
+         border-color: #e74c3c;
+         /* Red border when input is focused and invalid */
+      }
+
+      .message {
+         color: #fff;
+         padding: 10px;
+         border-radius: 5px;
+         margin-bottom: 10px;
+      }
+
+      .alert-warning {
+         background-color: #f39c12;
+         /* Yellow background for warning messages */
+      }
+
+      input[type="checkbox"] {
+         accent-color: rgb(28, 104, 28);
+      }
+
+      .form-container {
+         overflow: hidden;
+         position: relative;
+         width: 100%;
+         max-width: 500px;
+         margin: 0 auto;
+      }
+
+      .form-slider {
+         display: flex;
+         transition: transform 0.4s ease-in-out;
+      }
+
+      .form-section {
+         min-width: 100%;
+         padding: 0px;
+      }
+
+      .btn-toggle-group .btn {
+         border-radius: 0;
+      }
+
+      .btn-toggle-group .btn:first-child {
+         border-top-left-radius: 10px;
+         border-bottom-left-radius: 10px;
+      }
+
+      .btn-toggle-group .btn:last-child {
+         border-top-right-radius: 10px;
+         border-bottom-right-radius: 10px;
+      }
+
+      .btn-toggle-group .btn.active {
+         background-color: #FF6600;
+         color: white;
+         border-color: #FF6600;
+      }
+
+      .form_wrapper {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border: 2px solid #ddd;
+         border-radius: 10px;
+         overflow: hidden;
+         width: 100;
+         margin: auto;
+      }
+
+      .toggle-option {
+         flex: 1;
+         padding: 10px 20px;
+         text-align: center;
+         cursor: pointer;
+         font-weight: bold;
+         transition: background-color 0.3s, color 0.3s;
+      }
+
+      .toggle-option.active {
+         background-color: #FF6600;
+         color: white;
+      }
+
+      .custom-card {
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         overflow: hidden;
+         display: flex;
+         align-items: center;
+         padding: 10px;
+         width: 100%;
+         height: 70px;
+      }
+
+      .custom-card img {
+         width: 80px;
+         height: 50px;
+         object-fit: cover;
+         border-radius: 5px;
+         margin-right: 15px;
+      }
+
+      .custom-card .card-content {
+         flex: 1;
+      }
+
+      .custom-card .card-title {
+         font-size: 16px;
+         font-weight: bold;
+         margin-bottom: 5px;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+      }
+
+      .custom-card .card-author {
+         font-size: 14px;
+         color: #f56a00;
+      }
+
+      #amount_boarder {
+         border-radius: 5px;
+         margin-right: 5px;
+      }
+
+      .tip-container {
+         background-color: #fff7f0;
+         border: 1px solid #f5e5dc;
+         border-radius: 8px;
+         padding: 10px 15px;
+         font-size: 13px;
+         width: 100%;
+         height: 120px;
+      }
+
+      .tip-container .tip-text {
+         margin-bottom: 10px;
+         color: #555;
+      }
+
+      .tip-container .support-text {
+         font-weight: bold;
+         color: #333;
+      }
+
+      .tip-select {
+         width: auto;
+         display: inline-block;
+         margin-left: 110px;
+      }
+
+      /* Responsive Styling */
+      @media (max-width: 768px) {
+         .navbar-area {
+            position: absolute;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            z-index: 10;
+         }
+
+         .navbar-toggler {
+            z-index: 11;
+            /* Ensure toggler appears above navbar content */
+         }
+
+         .bottom-image img {
+            margin-top: 40px;
+            /* Offset the image to avoid overlap with the navbar */
+         }
+      }
+
+      .input-container {
+         position: relative;
+         display: inline-block;
+         width: 100%
+      }
+
+      #password-input {
+         padding-right: 30px;
+         /* Add space for the eye icon */
+         width: 100%;
+         /* Adjust width as needed */
+         font-size: 16px;
+      }
+
+      .eye-icon {
+         position: absolute;
+         right: 10px;
+         /* Adjust spacing to align the icon */
+         top: 55%;
+         transform: translateY(-50%);
+         cursor: pointer;
+         font-size: 18px;
+      }
+
+      .small-icon {
+         width: 100px;
+         height: 100px;
+      }
+
+      h1,
+      h2 {
+         color: #333;
+      }
+
+      p {
+         margin: 10px 0;
+      }
+
+      #span_id {
+         padding-right: 20px;
+      }
+
+
+
+      ._failed {
+         border-bottom: solid 4px red !important;
+      }
+
+      ._failed i {
+         color: red !important;
+      }
+
+      ._cancel {
+         border-bottom: solid 4px yellow !important;
+      }
+
+      ._cancel i {
+         color: yellow !important;
+      }
+
+      ._success {
+         box-shadow: 0 15px 25pxrgba(253, 216, 8, 0.1);
+         padding: 45px;
+         width: 100%;
+         text-align: center;
+         margin: 40px auto;
+         border-bottom: solid 4px #28a745;
+      }
+
+      ._success i {
+         font-size: 55px;
+         color: #28a745;
+      }
+
+      ._success h2 {
+         margin-bottom: 12px;
+         font-size: 40px;
+         font-weight: 500;
+         line-height: 1.2;
+         margin-top: 10px;
+      }
+
+      ._success p {
+         margin-bottom: 0px;
+         font-size: 18px;
+         color: #495057;
+         font-weight: 500;
+      }
+   </style>
+   <meta property="og:title" content="Pagirnthidu Foundation" />
+   <meta property="og:image" content="" />
+   <title>Pagirnthidu Foundation - Crowd Funding</title>
+
+</head>
+
+<body>
+
+   <!-- header -->
+
+
+
+   <nav class="navbar navbar-area navbar-expand-lg charity-nav-06 has-topbar nav-style-02 fixed-top">
+      <div class="container nav-container">
+         <div class="responsive-mobile-menu">
+            <div class="logo-wrapper">
+               <a href="/" class="logo">
+                  <img class="logo" src="/static/web/assets/frontend/img/Pagirnthidu%20Logo.svg" />
+               </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"
+               aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+         </div>
+         <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
+            <ul class="navbar-nav">
+               <li>
+                  <a href="/donation/" style="">
+                     Discover Campaigns
+                  </a>
+               </li>
+               <li>
+                  <a href="/our-mission/" style="">
+                     Monthly Mission
+                  </a>
+               </li>
+               <li>
+                  <a href="/about/" style="">About</a>
+               </li>
+            </ul>
+         </div>
+         <div class="nav-right-content">
+            <ul>
+               <li class="padding">
+                  <div class="dropdown req-cam-btn">
+                     <a class="dropdown-toggle" href="" style="" role="button" data-toggle="dropdown">Requests
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="req-cam-btn dropdown-item" href="/request-campaign/" style="">Request a Campaign</a>
+                        <a class="dropdown-item" href="/request-volunteer/" style="">Request a volunteer</a>
+                     </div>
+                  </div>
+               </li>
+
+               <li>
+               <li id="donate"><a href="/login/" style="">Login/Signup</a></li>
+               </li>
+
+            </ul>
+         </div>
+      </div>
+   </nav>
+   </div>
+
+
+
+   <!-- Dynamic content -->
+
+
+
+   <!--banner image start -->
+   <div class="header-slider-new bottom-image">
+
+      <div class="">
+         <a href="/our-mission/mission-education">
+            <img src="/static/web/assets/uploads/media-uploader/banner-education1712936727.png" alt="" />
+         </a>
+      </div>
+
+      <div class="">
+         <a href="/our-mission/mission-animalwelfare">
+            <img src="/static/web/assets/uploads/media-uploader/banner-animalcare1712934138.png" alt="" />
+         </a>
+      </div>
+
+      <div class="">
+         <a href="/our-mission/mission-ecosystem">
+            <img src="/static/web/assets/uploads/media-uploader/banner-ecosystem1712936781.png" alt="" />
+         </a>
+      </div>
+
+      <div class="">
+         <a href="/our-mission/mission-sports">
+            <img src="/static/web/assets/uploads/media-uploader/banner-sports1712936805.png" alt="" />
+         </a>
+      </div>
+
+      <div class="">
+         <a href="/our-mission/mission-innovation">
+            <img src="/static/web/assets/uploads/media-uploader/banner-innovation1712936759.png" alt="" />
+         </a>
+      </div>
+
+   </div>
+   <!--banner image end -->
+
+   <div class="overlay-gradient">
+      <section class="featured-area">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-lg-8 col-sm-11 col-11">
+                  <div class="section-title section-title-five desktop-center padding-top-25 margin-bottom-50">
+                     <!-- <h2 class="title">Featurd <span> Campaign </span> </h2> -->
+                     <p class="top-title">Start Donating</p>
+                     <h4 class="title">Pick a Cause Close to Your Heart</h4>
+                  </div>
+               </div>
+            </div>
+            <nav>
+               <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active show " id="nav-home-tab" data-toggle="tab" href="#nav-all">All</a>
+
+
+                  <a class="nav-item nav-link category-tab" data-category-id="1" id="nav-home-tab" data-toggle="tab"
+                     href="#nav-1">Education</a>
+
+                  <a class="nav-item nav-link category-tab" data-category-id="2" id="nav-home-tab" data-toggle="tab"
+                     href="#nav-2">Animal Welfare</a>
+
+                  <a class="nav-item nav-link category-tab" data-category-id="3" id="nav-home-tab" data-toggle="tab"
+                     href="#nav-3">Ecosystem</a>
+
+                  <a class="nav-item nav-link category-tab" data-category-id="4" id="nav-home-tab" data-toggle="tab"
+                     href="#nav-4">Sports</a>
+
+                  <a class="nav-item nav-link category-tab" data-category-id="5" id="nav-home-tab" data-toggle="tab"
+                     href="#nav-5">Innovations</a>
+
+               </div>
+            </nav>
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+               <div class="tab-pane fade active show" id="nav-all">
+                  <div class="row" id="all_camp">
+                  </div>
+               </div>
+
+               <div class="tab-pane fade" id="nav-1">
+                  <div class="row" id="camp_1">
+                  </div>
+               </div>
+
+               <div class="tab-pane fade" id="nav-2">
+                  <div class="row" id="camp_2">
+                  </div>
+               </div>
+
+               <div class="tab-pane fade" id="nav-3">
+                  <div class="row" id="camp_3">
+                  </div>
+               </div>
+
+               <div class="tab-pane fade" id="nav-4">
+                  <div class="row" id="camp_4">
+                  </div>
+               </div>
+
+               <div class="tab-pane fade" id="nav-5">
+                  <div class="row" id="camp_5">
+                  </div>
+               </div>
+
+            </div>
+            <!-- View all Campaigns -->
+            <div class="viewallcambtn">
+               <a href="/donation/"><button>View all Campaigns</button></a>
+            </div>
+      </section>
+   </div>
+
+   <!--How it Works-->
+   <div class="hiwbg">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
+               <h3>How it Works?</h3>
+               <h2>How to create a campaign for your cause in 3 easy steps</h2>
+            </div>
+            <!--end lft-->
+            <div class="col-lg-7 col-md-7 col-xs-12 col-sm-12">
+               <ul>
+                  <li>
+                     <div class="listimg"><img src="/static/web/assets/frontend/img/about/choosecause.jpg" width="75">
+                     </div>
+                     <div class="hiwlist">
+                        <h3>Choose a Cause</h3>
+                        <p>Empower change by selecting a cause that you want to donate to.</p>
+                     </div>
+                     <div class="clr"></div>
+                  </li>
+                  <li>
+                     <div class="listbdr"></div>
+                  </li>
+                  <li>
+                     <div class="listimg"><img src="/static/web/assets/frontend/img/about/contribution.jpg" width="75">
+                     </div>
+                     <div class="hiwlist">
+                        <h3>Select your contribution</h3>
+                        <p>Provide your support with a contribution that fits your commitment and makes a meaningful
+                           impact.</p>
+                     </div>
+                     <div class="clr"></div>
+                  </li>
+                  <li>
+                     <div class="listbdr"></div>
+                  </li>
+                  <li>
+                     <div class="listimg"><img src="/static/web/assets/frontend/img/about/paymentproces.jpg" width="75">
+                     </div>
+                     <div class="hiwlist">
+                        <h3>Secure payment processing</h3>
+                        <p>Ensure peace of mind as you make a difference with our reliable and secure payment processing
+                           system.</p>
+                     </div>
+                     <div class="clr"></div>
+                  </li>
+                  <li>
+                     <div class="listbdr"></div>
+                  </li>
+                  <li>
+                     <div class="listimg"><img src="/static/web/assets/frontend/img/about/impact.jpg" width="75"></div>
+                     <div class="hiwlist">
+                        <h3>Witness the Impact</h3>
+                        <p>Experience the real change your contribution brings as you witness the positive impact on
+                           lives and communities.</p>
+                     </div>
+                     <div class="clr"></div>
+                  </li>
+               </ul>
+            </div>
+            <!--end rgt-->
+         </div>
+         <!--end row-->
+      </div>
+      <!--end containet-->
+   </div>
+   <!--End How it works-->
+
+   <!--How it works flow-->
+   <div class="container howworks" style="display:none;">
+      <div class="section-title">
+         <h4 class="title">How it works?</h4>
+      </div>
+      <img src="/static/web/assets/frontend/img/others/arrowLine.png" alt="" class="arrowlinen1">
+      <div class="clr"></div>
+      <img src="/static/web/assets/frontend/img/others/arrowLineDown.png" alt="" class="arrowlinen2">
+      <div class="clr"></div>
+      <div class="row">
+         <div class="col-md-4 col-lg-4">
+            <h4 class="num">1</h4>
+            <h3>Start with basics</h3>
+            <p>Kick things off with yor name and location.</p>
+         </div>
+         <div class="col-md-4 col-lg-4">
+            <h4 class="num">2</h4>
+            <h3>Tell your story</h3>
+            <p>We'll guide you with </p>
+         </div>
+         <div class="col-md-4 col-lg-4">
+            <h4 class="num">3</h4>
+            <h3>Share with friends & family</h3>
+            <p>Kick things off with yor name and location.</p>
+         </div>
+      </div>
+   </div>
+   <!-- End How it works flow-->
+
+   </div>
+   <div class="logo-bottom">
+      <img src="/static/web/assets/frontend/img/low_logo.png" alt="">
+   </div>
+
+   <!-- Social Share Popup -->
+   <!-- Modal -->
+   <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+         <!-- Modal content-->
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <div class="social-share-wrap">
+                  <ul>
+                     <li>Share on Socials</li>
+                  </ul>
+                  <ul>
+                     <li><a data-toggle="tooltip" title="Share Facebook Link" class="facebook"
+                           href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=https://pagirnthidu.in/demo/donation/donate-for-cancer-patients&display=popup&ref=plugin&src=share_button"><i
+                              class="fab fa-facebook-f"></i></a></li>
+                     <li><a data-toggle="tooltip" title="Share Twitter Link" class="twitter"
+                           href="https://twitter.com/intent/tweet?text=Donate%20for%20cancer%20patients&amp;url=https%3A%2F%2Fpagirnthidu.in%2Fdemo%2Fdonation%2Fdonate-for-cancer-patients&amp;via=Pagirnthidu Foundation"><i
+                              class="fab fa-twitter"></i></a></li>
+                     <li><a data-toggle="tooltip" title="Share WhatsApp Link" class="whatsapp" target="_blank"
+                           href="https://api.whatsapp.com/send?text=*Donate%20for%20cancer%20patients https%3A%2F%2Fpagirnthidu.in%2Fdemo%2Fdonation%2Fdonate-for-cancer-patients"><i
+                              class="fab fa-whatsapp"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End Social share -->
+
+
+   <script>
+      $(document).ready(function () {
+         $.ajax({
+            url: "/campaigns/",  // Use the correct URL pattern
+            type: "GET",
+            data: { category: "all" },
+            dataType: "json",
+            success: function (response) {
+               let htmlContent = "";
+               if (response.campaigns.length > 0) {
+                  response.campaigns.forEach(function (datas) {
+                     htmlContent += `
+                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                    <div class="thumbnail">
+                                          <a href="${datas.donation_url}">
+                                             <img src="${datas.image}" alt=""/>
+                                          </a>
+                                          <div class="caption">
+                                             <a href="${datas.donation_url}">
+                                                <p class="title">${datas.title}</p>
+                                             </a>
+                                             <div class="slider-content">
+                                                <p><i class="fa fa-rupee"></i><span>${datas.raised}</span> raised out of <i class="fa fa-rupee"></i>${datas.amount}</p>
+                                                <div class="single-progressbar">
+                                                      <div class="donation-progress" data-percentage="${datas.percentage}"></div>
+                                                </div>
+                                             </div>
+                                             <div class="support">
+                                                <p>${datas.days_left} days left</p>
+                                             </div>
+                                             <div style="display:flex;">
+                                                <button type="button" class="socialshare1" data-toggle="modal" data-target="#myModal">
+                                                      <img src="/static/web/assets/frontend/img/socialshare.png">
+                                                </button>
+                                                <div>
+                                                      <a href="${datas.donation_url}">
+                                                         <button class="donatebtn2">Donate</button>
+                                                      </a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                    </div>
+                                 </div>`;
+                  });
+               } else {
+                  htmlContent = `<div class="row ml-5"><h5 class="text-center">No Campaign Available</h5></div>`;
+               }
+               $("#all_camp").html(htmlContent);
+            },
+            error: function (xhr, status, error) {
+               console.log("Error fetching data:", error);
+            }
+         });
+
+         $(".category-tab").on("click", function () {
+            let category_id = $(this).data("category-id"); // Get category ID
+            console.log(category_id);
+            fetchCampaigns(category_id);
+         });
+      });
+
+      function fetchCampaigns(category_id) {
+         $.ajax({
+            url: "/campaigns/", // Pass category_id as a query param
+            type: "GET",
+            data: { category: category_id },
+            dataType: "json",
+            success: function (response) {
+               let htmlContent = "";
+
+               if (response.campaigns.length > 0) {
+                  response.campaigns.forEach(function (datas) {
+                     htmlContent += `
+                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                 <div class="thumbnail">
+                                     <a href="${datas.donation_url}">
+                                         <img src="${datas.image}" alt=""/>
+                                     </a>
+                                     <div class="caption">
+                                         <a href="${datas.donation_url}">
+                                             <p class="title">${datas.title}</p>
+                                         </a>
+                                         <div class="slider-content">
+                                             <p><i class="fa fa-rupee"></i><span>${datas.raised}</span> raised out of <i class="fa fa-rupee"></i>${datas.amount}</p>
+                                             <div class="single-progressbar">
+                                                 <div class="donation-progress" data-percentage="${datas.percentage}"></div>
+                                             </div>
+                                         </div>
+                                         <div class="support">
+                                             <p>${datas.days_left} days left</p>
+                                         </div>
+                                         <div style="display:flex;">
+                                             <button type="button" class="socialshare1" data-toggle="modal" data-target="#myModal">
+                                                 <img src="/static/web/assets/frontend/img/socialshare.png" width="100%">
+                                             </button>
+                                             <div>
+                                                 <a href="${datas.donation_url}">
+                                                     <button class="donatebtn2">Donate</button>
+                                                 </a>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>`;
+                  });
+               } else {
+                  htmlContent = `<div class="row ml-5"><h5 class="text-center">No Campaign Available</h5></div>`;
+               }
+
+               $("#camp_" + category_id).html(htmlContent); // Update category div
+            },
+            error: function (xhr, status, error) {
+               console.log("Error fetching data:", error);
+            }
+         });
+      }
+
+   </script>
+
+   <script>
+      $(document).ready(function () {
+         $('[data-toggle="tooltip"]').tooltip({ 'placement': 'left', 'color': 'green' });
+      });
+   </script>
+   <script type="text/javascript">
+      $(document).ready(function () {
+         $(".mainmenu2 a").on("click", function () {
+            $(".mainmenu2").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+         });
+      });
+   </script>
+
+   <script type="text/javascript">
+      $(document).ready(function () {
+         $(".owl-carousel").owlCarousel({
+            //items:3,
+            autoplay: true,
+            margin: 30,
+            loop: true,
+            dots: true,
+            responsive: {
+               0: {
+                  items: 1
+               },
+               600: {
+                  items: 2
+               },
+               900: {
+                  items: 3
+               }
+            }
+            //      nav:true,
+            //      navText:["<i class='fas fa-long-arrow-alt-left'></i>","<i class='fas fa-long-arrow-alt-right'></i>" ]
+         });
+      });
+   </script>
+   <script>
+      var items = $('.content-div.active').length
+
+      $(document).on('click', '#right_arrow', function (e) {
+         e.preventDefault();
+         $(".content-div.active").removeClass("active").next().addClass("active");
+      })
+      $(document).on('click', '#left_arrow', function (e) {
+         e.preventDefault();
+         $(".content-div").removeClass("active");
+         $('.content-div').prev().addClass("active");
+      })
+   </script>
+   <script>
+      $(document).on('click', '.donation_redirect_button', function (e) {
+         e.preventDefault();
+         var select = $('#donation_select');
+         var donationId = select.val();
+         var paymentPageUrl = $('#donation_select option[value="' + donationId + '"]').data('url');
+         var amount = $('.user_input_number').val();
+         window.location = paymentPageUrl + '?number=' + amount;
+      });
+
+   </script>
+
+
+   <!-- footer -->
+
+   <!-- End Social share -->
+   <footer class="footer-area footersec">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3">
+               <a href="/"><img width="120px" src="/static/web/assets/frontend/img/Pagirnthidu%20Logo-wh.svg" /></a>
+               <p>India's first charitable trust with a vision to uplift aspiring individuals only who have the
+                  capability and the willingness to help others.</p>
+               <a href="/login/" class="button">Login/SignUp</a>
+            </div>
+            <!-- end col1 -->
+            <div class="col-lg-3">
+               <h3>Contact Us</h3>
+               <ul>
+                  <li>+91 98765432210</li>
+                  <li><a href="mailto:help@pagirnthidu.in">help@pagirnthidu.in</a></li>
+                  <li>523/2,Udayampalayam Road, Nava India, Coimbatore, Tamil Nadu 641028.</li>
+               </ul>
+            </div>
+            <!-- end col2 -->
+            <div class="col-lg-3">
+               <h3>Donors</h3>
+               <ul>
+                  <li><a href="/donation/">Browse Campaigns</a></li>
+                  <li><a href="/our-mission/">Monthly Mission</a></li>
+                  <li><a href="/about#testimonials">Testimonials</a></li>
+                  <li><a href="/about#faqsec">FAQS</a></li>
+               </ul>
+            </div>
+            <!-- end col3 -->
+            <div class="col-lg-3">
+               <h3>About</h3>
+               <ul>
+                  <li><a href="/about/">Our Story</a></li>
+                  <li><a href="/contact/">Contact Us</a></li>
+                  <li><a href="/terms-condition/">Terms of Use</a></li>
+                  <li><a href="/privacy-policy/">Privacy Policy</a></li>
+               </ul>
+            </div>
+            <!-- end col4 -->
+         </div>
+         <!-- end row -->
+         <hr>
+         <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <ul class="social_links">
+                  <li><a href=""><i class=""><img width="14px"
+                              src="/static/web/assets/frontend/img/twitter.png" /></i></a></li>
+                  <li><a href="https://m.facebook.com/pagirnthidu/" target="_blank"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li><a href="https://in.linkedin.com/showcase/pagirnthidu/" target="_blank"><i
+                           class="fa fa-linkedin"></i></a></li>
+                  <li><a href=""><i class="fa fa-instagram"></i></a></li>
+               </ul>
+            </div>
+            <!-- end col -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <p>Copyright © <span id="year"></span> Pagirnthidu by <a href="https://www.grouppal.com/" target="_blank"
+                     class="link">GroupPal</a>. All Rights Reserved.</p>
+            </div>
+            <!-- end col -->
+         </div>
+         <!-- end row -->
+      </div>
+   </footer>
+
+   <div class="back-to-top">
+      <span class="back-top">
+         <i class="fas fa-angle-up"></i>
+      </span>
+   </div>
+
+   <!-- scripts -->
+
+   <!-- load all script -->
+
+
+   <script src="/static/web/assets/common/js/bootstrap.min.js"></script>
+   <script src="/static/web/assets/frontend/js/dynamic-script.js"></script>
+   <script src="/static/web/assets/frontend/js/jquery.magnific-popup.js"></script>
+
+   <script src="/static/web/assets/frontend/js/jquery.counterup.min.js"></script>
+   <script src="/static/web/assets/frontend/js/owl.carousel.min.js"></script>
+   <script src="/static/web/assets/frontend/js/jQuery.rProgressbar.min.js"></script>
+   <script src="/static/web/assets/frontend/js/active.rProgressbar.js"></script>
+   <script src="/static/web/assets/frontend/js/wow.min.js"></script>
+   <script src="/static/web/assets/backend/js/sweetalert2.js"></script>
+   <script src="/static/web/assets/frontend/js/imagesloaded.pkgd.min.js"></script>
+   <script src="/static/web/assets/frontend/js/isotope.pkgd.min.js"></script>
+   <script src="/static/web/assets/common/js/toastr.min.js"></script>
+   <script src="/static/web/assets/frontend/js/slick.min.js"></script>
+   <!--<script src="/static/assets/backend/js/jquery.nice-select.min.js"></script>-->
+   <script src="/static/web/assets/frontend/js/main.js"></script>
+   <script src="/static/web/assets/frontend/js/main2.js"></script>
+   <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LdvUeQUAAAAAHKM02AWBjtKAAL0-"></script> -->
+   <script src="/static/web/assets/frontend/js/jquery.popup.lightbox.js"></script>
+   <script src="/static/web/assets/frontend/js/jquery.ihavecookies.min.js"></script>
+   <script src="/static/web/assets/backend/js/dropzone.js"></script>
+
+
+   <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+   </script>
+
+   <script>
+      function getCookie(cname) {
+         var name = cname + "=";
+         var decodedCookie = decodeURIComponent(document.cookie);
+         var ca = decodedCookie.split(';');
+         for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+               c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+               return c.substring(name.length, c.length);
+            }
+         }
+         return "";
+      }
+
+      function setCookie(cname, cvalue, exdays) {
+         var d = new Date();
+         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+         var expires = "expires=" + d.toUTCString();
+         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+
+      (function ($) {
+         "use strict";
+
+         $(window).on('scroll', function () {
+
+            if ($(window).width() > 992) {
+               /*--------------------------
+               sticky menu activation
+              -------------------------*/
+               var st = $(this).scrollTop();
+               var mainMenuTop = $('.navbar-area');
+               if ($(window).scrollTop() > 1000) {
+                  // active sticky menu on scrollup
+                  mainMenuTop.addClass('nav-fixed');
+               } else {
+                  mainMenuTop.removeClass('nav-fixed ');
+               }
+            }
+         });
+
+
+
+      }(jQuery));
+
+   </script>
+
+</body>
+
+</html>
