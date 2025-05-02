@@ -565,9 +565,9 @@ code {
     padding-bottom: 115px;
 }
 
-.padding-bottom-120 {
+/* .padding-bottom-120 {
     padding-bottom: 120px;
-}
+} */
 
 .padding-bottom-125 {
     padding-bottom: 125px;
@@ -11670,7 +11670,7 @@ section {
 .footer-area {
     background: #000;
     padding: 60px 0px 25px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 
 }
 
@@ -12881,7 +12881,6 @@ select {
 
 .sindotgen .support .fr {
     float: right;
-    !important;
 }
 
 
@@ -13001,7 +13000,6 @@ select {
 
 .mycampaign .support .fr {
     float: right;
-    !important;
 }
 
 .mainmenu2 li a .active {
@@ -13048,7 +13046,6 @@ select {
 
 
 /*Footer*/
-.footersec {}
 
 .footersec .logo {
     margin-bottom: 15px;
@@ -13148,7 +13145,6 @@ select {
 /*End Footer*/
 
 /*About Page*/
-.aboutsec {}
 
 .aboutsec h3 {
     font-size: 20px;
@@ -13412,7 +13408,6 @@ select {
 .contactfrm .iti__flag-container {
     position: absolute;
     top: -20px !important;
-    ;
     bottom: 0;
     right: 0;
     padding: 1px;
@@ -13430,7 +13425,7 @@ select {
     text-align: justify;
 }
 
-.termstxt .listn ul {}
+
 
 .termstxt .listn li {
     list-style: none;
