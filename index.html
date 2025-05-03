@@ -30,7 +30,8 @@
    <link rel="stylesheet" href="/static/web/assets/common/css/toastr.css">
    <link rel="stylesheet" href="/static/web/assets/frontend/css/slick.css">
    <link rel="stylesheet" href="/static/web/assets/frontend/css/style.css">
-   <link rel="stylesheet" href="/static/web/assets/frontend/css/style_02.css">
+   <link rel="stylesheet" href="/static/web/assets/frontend/css/custom-style.css">
+
    <link rel="stylesheet" href="/static/web/assets/frontend/css/faqaccordion.css/">
    <link rel="stylesheet" href="/static/web/assets/frontend/css/responsive.css">
    <link rel="stylesheet" href="/static/web/assets/frontend/css/jquery.ihavecookies.css/">
@@ -50,341 +51,7 @@
 
    <script src="/static/web/assets/frontend/js/jquery.dataTables.min.js"></script>
 
-   <style>
-      :root {
-         --main-color-one: #4a90e2;
-         --main-color-two: #1a191f;
-         --portfolio-color: ;
-         --logistic-color: ;
-         --industry-color: ;
-         --secondary-color: #00bdc0;
-         --heading-color: #2b2a35;
-         --paragraph-color: #616161;
-         --construction-color: ;
-         --heading-font: "Advent Pro", sans-serif;
-         --body-font: "Roboto", sans-serif;
-      }
-   </style>
-   <style>
-      /* Add padding to avoid content being hidden */
-      body {
-         padding-top: 80px;
-         /* Height of fixed-top navbar */
-         padding-bottom: 60px;
-         /* Height of fixed-bottom navbar if used */
-      }
 
-      /* Ensure file input label adapts to the selected file */
-      .custom-file-input:lang(en)~.custom-file-label::after {
-         content: "Change";
-         /* Custom text when file is selected */
-      }
-
-      .fixed-left-button {
-         position: fixed;
-         left: 10px;
-         /* Adjust for margin */
-         bottom: 20px;
-         /* Position at bottom-left */
-         z-index: 1050;
-         /* Ensure it stays above content */
-      }
-
-      .td-limit {
-         max-width: 70px;
-         text-overflow: ellipsis;
-         white-space: nowrap;
-         overflow: hidden;
-      }
-
-      /* Display the selected file name */
-      #fileName {
-         margin-top: 5px;
-         color: #6c757d;
-         font-size: 14px;
-      }
-
-      .form-group {
-         margin-bottom: 5px;
-         /* Reduced margin between form fields */
-      }
-
-      .text-danger {
-         font-size: 0.75rem;
-         /* Smaller font size */
-         color: #e74c3c;
-         /* Red color for errors */
-         margin-top: 3px;
-         font-weight: 400;
-      }
-
-      .required {
-         color: #e74c3c;
-         ;
-      }
-
-      .form-group input:focus:invalid {
-         border-color: #e74c3c;
-         /* Red border when input is focused and invalid */
-      }
-
-      .message {
-         color: #fff;
-         padding: 10px;
-         border-radius: 5px;
-         margin-bottom: 10px;
-      }
-
-      .alert-warning {
-         background-color: #f39c12;
-         /* Yellow background for warning messages */
-      }
-
-      input[type="checkbox"] {
-         accent-color: rgb(28, 104, 28);
-      }
-
-      .form-container {
-         overflow: hidden;
-         position: relative;
-         width: 100%;
-         max-width: 500px;
-         margin: 0 auto;
-      }
-
-      .form-slider {
-         display: flex;
-         transition: transform 0.4s ease-in-out;
-      }
-
-      .form-section {
-         min-width: 100%;
-         padding: 0px;
-      }
-
-      .btn-toggle-group .btn {
-         border-radius: 0;
-      }
-
-      .btn-toggle-group .btn:first-child {
-         border-top-left-radius: 10px;
-         border-bottom-left-radius: 10px;
-      }
-
-      .btn-toggle-group .btn:last-child {
-         border-top-right-radius: 10px;
-         border-bottom-right-radius: 10px;
-      }
-
-      .btn-toggle-group .btn.active {
-         background-color: #FF6600;
-         color: white;
-         border-color: #FF6600;
-      }
-
-      .form_wrapper {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         border: 2px solid #ddd;
-         border-radius: 10px;
-         overflow: hidden;
-         width: 100;
-         margin: auto;
-      }
-
-      .toggle-option {
-         flex: 1;
-         padding: 10px 20px;
-         text-align: center;
-         cursor: pointer;
-         font-weight: bold;
-         transition: background-color 0.3s, color 0.3s;
-      }
-
-      .toggle-option.active {
-         background-color: #FF6600;
-         color: white;
-      }
-
-      .custom-card {
-         border: 1px solid #ddd;
-         border-radius: 8px;
-         overflow: hidden;
-         display: flex;
-         align-items: center;
-         padding: 10px;
-         width: 100%;
-         height: 70px;
-      }
-
-      .custom-card img {
-         width: 80px;
-         height: 50px;
-         object-fit: cover;
-         border-radius: 5px;
-         margin-right: 15px;
-      }
-
-      .custom-card .card-content {
-         flex: 1;
-      }
-
-      .custom-card .card-title {
-         font-size: 16px;
-         font-weight: bold;
-         margin-bottom: 5px;
-         white-space: nowrap;
-         overflow: hidden;
-         text-overflow: ellipsis;
-      }
-
-      .custom-card .card-author {
-         font-size: 14px;
-         color: #f56a00;
-      }
-
-      #amount_boarder {
-         border-radius: 5px;
-         margin-right: 5px;
-      }
-
-      .tip-container {
-         background-color: #fff7f0;
-         border: 1px solid #f5e5dc;
-         border-radius: 8px;
-         padding: 10px 15px;
-         font-size: 13px;
-         width: 100%;
-         height: 120px;
-      }
-
-      .tip-container .tip-text {
-         margin-bottom: 10px;
-         color: #555;
-      }
-
-      .tip-container .support-text {
-         font-weight: bold;
-         color: #333;
-      }
-
-      .tip-select {
-         width: auto;
-         display: inline-block;
-         margin-left: 110px;
-      }
-
-      /* Responsive Styling */
-      @media (max-width: 768px) {
-         .navbar-area {
-            position: absolute;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            /* Semi-transparent background */
-            z-index: 10;
-         }
-
-         .navbar-toggler {
-            z-index: 11;
-            /* Ensure toggler appears above navbar content */
-         }
-
-         .bottom-image img {
-            margin-top: 40px;
-            /* Offset the image to avoid overlap with the navbar */
-         }
-      }
-
-      .input-container {
-         position: relative;
-         display: inline-block;
-         width: 100%
-      }
-
-      #password-input {
-         padding-right: 30px;
-         /* Add space for the eye icon */
-         width: 100%;
-         /* Adjust width as needed */
-         font-size: 16px;
-      }
-
-      .eye-icon {
-         position: absolute;
-         right: 10px;
-         /* Adjust spacing to align the icon */
-         top: 55%;
-         transform: translateY(-50%);
-         cursor: pointer;
-         font-size: 18px;
-      }
-
-      .small-icon {
-         width: 100px;
-         height: 100px;
-      }
-
-      h1,
-      h2 {
-         color: #333;
-      }
-
-      p {
-         margin: 10px 0;
-      }
-
-      #span_id {
-         padding-right: 20px;
-      }
-
-
-
-      ._failed {
-         border-bottom: solid 4px red !important;
-      }
-
-      ._failed i {
-         color: red !important;
-      }
-
-      ._cancel {
-         border-bottom: solid 4px yellow !important;
-      }
-
-      ._cancel i {
-         color: yellow !important;
-      }
-
-      ._success {
-         box-shadow: 0 15px 25pxrgba(253, 216, 8, 0.1);
-         padding: 45px;
-         width: 100%;
-         text-align: center;
-         margin: 40px auto;
-         border-bottom: solid 4px #28a745;
-      }
-
-      ._success i {
-         font-size: 55px;
-         color: #28a745;
-      }
-
-      ._success h2 {
-         margin-bottom: 12px;
-         font-size: 40px;
-         font-weight: 500;
-         line-height: 1.2;
-         margin-top: 10px;
-      }
-
-      ._success p {
-         margin-bottom: 0px;
-         font-size: 18px;
-         color: #495057;
-         font-weight: 500;
-      }
-   </style>
    <meta property="og:title" content="Pagirnthidu Foundation" />
    <meta property="og:image" content="" />
    <title>Pagirnthidu Foundation - Crowd Funding</title>
@@ -394,61 +61,77 @@
 <body>
 
    <!-- header -->
-
-
-
-   <nav class="navbar navbar-area navbar-expand-lg charity-nav-06 has-topbar nav-style-02 fixed-top">
-      <div class="container nav-container">
-         <div class="responsive-mobile-menu">
-            <div class="logo-wrapper">
-               <a href="/" class="logo">
-                  <img class="logo" src="/static/web/assets/frontend/img/Pagirnthidu%20Logo.svg" />
-               </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"
-               aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-         </div>
-         <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
-            <ul class="navbar-nav">
-               <li>
-                  <a href="/donation/" style="">
-                     Discover Campaigns
+   <header>
+      <nav class="navbar navbar-area navbar-expand-lg has-topbar nav-style-01">
+         <div class="container nav-container">
+            <div class="responsive-mobile-menu">
+               <div class="logo-wrapper">
+                  <a href="/" class="logo">
+                     <img class="logo" src="/static/web/assets/frontend/img/Pagirnthidu%20Logo.svg" />
                   </a>
-               </li>
-               <li>
-                  <a href="/our-mission/" style="">
-                     Monthly Mission
-                  </a>
-               </li>
-               <li>
-                  <a href="/about/" style="">About</a>
-               </li>
-            </ul>
-         </div>
-         <div class="nav-right-content">
-            <ul>
-               <li class="padding">
-                  <div class="dropdown req-cam-btn">
-                     <a class="dropdown-toggle" href="" style="" role="button" data-toggle="dropdown">Requests
-                     </a>
-                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="req-cam-btn dropdown-item" href="/request-campaign/" style="">Request a Campaign</a>
-                        <a class="dropdown-item" href="/request-volunteer/" style="">Request a volunteer</a>
-                     </div>
+                  <div class="btn-resp d-lg-none">
+                     <ul>
+                        <li>
+                           <a id="loginBtn" href="#">Login / Sign-up</a>
+                        </li>
+                     </ul>
                   </div>
-               </li>
+               </div>
 
-               <li>
-               <li id="donate"><a href="/login/" style="">Login/Signup</a></li>
-               </li>
-
-            </ul>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"
+                  aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
+               <ul class="navbar-nav text-center">
+                  <li>
+                     <a href="#home">
+                        Home
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/about/">About</a>
+                  </li>
+                  <li>
+                     <a href="/donation/">
+                        Campaigns
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/our-mission/">
+                        Our Missions
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/our-mission/">
+                        Contact Us
+                     </a>
+                  </li>
+                  <li>
+                     <div class="dropdown req-cam-btn">
+                        <a class="dropdown-toggle" href="" role="button" data-toggle="dropdown"
+                           aria-expanded="false">Requests
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                           <a class="req-cam-btn dropdown-item" href="/request-campaign/">Request a
+                              Campaign</a>
+                           <a class="req-cam-btn dropdown-item" href="/request-volunteer/">Request a volunteer</a>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="nav-right-content d-lg-inline d-none">
+               <ul>
+                  <li>
+                     <a id="loginBtn" href="#">Login / Sign-up</a>
+                  </li>
+               </ul>
+            </div>
          </div>
-      </div>
-   </nav>
-   </div>
+      </nav>
+   </header>
 
 
 
@@ -459,31 +142,31 @@
    <!--banner image start -->
    <div class="header-slider-new bottom-image">
 
-      <div class="">
-         <a href="/our-mission/mission-education">
+      <div class="slideR-Img">
+         <a href="">
             <img src="/static/web/assets/uploads/media-uploader/banner-education1712936727.png" alt="" />
          </a>
       </div>
 
-      <div class="">
+      <div class="slideR-Img">
          <a href="/our-mission/mission-animalwelfare">
             <img src="/static/web/assets/uploads/media-uploader/banner-animalcare1712934138.png" alt="" />
          </a>
       </div>
 
-      <div class="">
+      <div class="slideR-Img">
          <a href="/our-mission/mission-ecosystem">
             <img src="/static/web/assets/uploads/media-uploader/banner-ecosystem1712936781.png" alt="" />
          </a>
       </div>
 
-      <div class="">
+      <div class="slideR-Img">
          <a href="/our-mission/mission-sports">
             <img src="/static/web/assets/uploads/media-uploader/banner-sports1712936805.png" alt="" />
          </a>
       </div>
 
-      <div class="">
+      <div class="slideR-Img">
          <a href="/our-mission/mission-innovation">
             <img src="/static/web/assets/uploads/media-uploader/banner-innovation1712936759.png" alt="" />
          </a>
@@ -492,89 +175,159 @@
    </div>
    <!--banner image end -->
 
-   <div class="overlay-gradient">
-      <section class="featured-area">
-         <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-lg-8 col-sm-11 col-11">
-                  <div class="section-title section-title-five desktop-center padding-top-25 margin-bottom-50">
-                     <!-- <h2 class="title">Featurd <span> Campaign </span> </h2> -->
-                     <p class="top-title">Start Donating</p>
-                     <h4 class="title">Pick a Cause Close to Your Heart</h4>
+   <!--About Content Start -->
+   <section class="aboutsec">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-6">
+               <h2>About Pagirnthidu</h2>
+               <p>India's first charitable trust with a vision to uplift aspiring individuals only who have the
+                  capability and the willingness to help others. The foundation serves as a platform for sharing
+                  materials, donations, and volunteering for the right needs with the givers and receivers who are about
+                  to make a positive impact.</p>
+               <h2 class="mt50">Why Pagirnthidu?</h2>
+               <p>Pagirnthidu, which translates to "Rise Together" in Tamil, encapsulates its core philosophy: the
+                  elevation of aspiring individuals who are not only determined to better their own lives but are
+                  equally committed to extending a helping hand to others.
+               </p>
+               <p>The vision is to create a community where empowerment, generosity, and a shared sense of
+                  responsibility coalesce to bring about positive change.
+               </p>
+            </div>
+            <div class="col-lg-6">
+               <div class="abtbgimg">
+                  <img src="/static/web/assets/frontend/img/about/about-bg.png">
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </section>
+   <!--About Content Ends-->
+
+   <!-- Campaigns Starts -->
+
+   <section class="featured-area Campaigns-sec">
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-lg-8 col-sm-11 col-11">
+               <div class="section-title section-title-five desktop-center margin-bottom-50">
+                  <!-- <h2 class="title">Featurd <span> Campaign </span> </h2> -->
+                  <p class="top-title">Start Donating</p>
+                  <h2>Pick a Cause Close to Your Heart</h2>
+               </div>
+            </div>
+         </div>
+         <nav>
+            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+               <a class="nav-item nav-link active show " id="nav-home-tab" data-toggle="tab" href="#nav-all">All</a>
+
+
+               <a class="nav-item nav-link category-tab" data-category-id="1" id="nav-home-tab" data-toggle="tab"
+                  href="#nav-1">Education</a>
+
+               <a class="nav-item nav-link category-tab" data-category-id="2" id="nav-home-tab" data-toggle="tab"
+                  href="#nav-2">Animal Welfare</a>
+
+               <a class="nav-item nav-link category-tab" data-category-id="3" id="nav-home-tab" data-toggle="tab"
+                  href="#nav-3">Ecosystem</a>
+
+               <a class="nav-item nav-link category-tab" data-category-id="4" id="nav-home-tab" data-toggle="tab"
+                  href="#nav-4">Sports</a>
+
+               <a class="nav-item nav-link category-tab" data-category-id="5" id="nav-home-tab" data-toggle="tab"
+                  href="#nav-5">Innovations</a>
+
+            </div>
+         </nav>
+         <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+            <div class="tab-pane fade active show" id="nav-all">
+               <div class="row" id="all_camp">
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                     <div class="thumbnail">
+                        <a href="#">
+                           <img src="static/web/assets/uploads/media-uploader/campain-image.png" alt="" />
+                        </a>
+                        <div class="caption">
+                           <a href="#">
+                              <p class="title">Education fund</p>
+                           </a>
+                           <div class="slider-content">
+                              <p>
+                                 <i class="fa fa-rupee"></i>
+                                 <span>₹40,000</span> raised out of
+                                 <i class="fa fa-rupee"></i> ₹5,00,000
+                              </p>
+                           </div>
+                           <div class="support">
+                              <p>Need with in 30 days</p>
+                           </div>
+                           <div class="btnS d-flex justify-content-between gap-2">
+
+                              <a href="#" data-toggle="modal" data-target="#myModal">
+                                 <div class="shareBtn">
+                                    <div class="d-flex align-items-center">
+                                       <img src="/static/web/assets/frontend/img/share-ico.svg" alt="share">
+                                       <p>Share</p>
+                                    </div>
+                                 </div>
+                              </a>
+                              <a href="#">
+                                 <div class="donateBtn">
+                                    <p>Donate</p>
+                                 </div>
+                              </a>
+                           </div>
+
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-            <nav>
-               <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                  <a class="nav-item nav-link active show " id="nav-home-tab" data-toggle="tab" href="#nav-all">All</a>
 
-
-                  <a class="nav-item nav-link category-tab" data-category-id="1" id="nav-home-tab" data-toggle="tab"
-                     href="#nav-1">Education</a>
-
-                  <a class="nav-item nav-link category-tab" data-category-id="2" id="nav-home-tab" data-toggle="tab"
-                     href="#nav-2">Animal Welfare</a>
-
-                  <a class="nav-item nav-link category-tab" data-category-id="3" id="nav-home-tab" data-toggle="tab"
-                     href="#nav-3">Ecosystem</a>
-
-                  <a class="nav-item nav-link category-tab" data-category-id="4" id="nav-home-tab" data-toggle="tab"
-                     href="#nav-4">Sports</a>
-
-                  <a class="nav-item nav-link category-tab" data-category-id="5" id="nav-home-tab" data-toggle="tab"
-                     href="#nav-5">Innovations</a>
-
+            <div class="tab-pane fade" id="nav-1">
+               <div class="row" id="camp_1">
                </div>
-            </nav>
-            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-               <div class="tab-pane fade active show" id="nav-all">
-                  <div class="row" id="all_camp">
-                  </div>
-               </div>
-
-               <div class="tab-pane fade" id="nav-1">
-                  <div class="row" id="camp_1">
-                  </div>
-               </div>
-
-               <div class="tab-pane fade" id="nav-2">
-                  <div class="row" id="camp_2">
-                  </div>
-               </div>
-
-               <div class="tab-pane fade" id="nav-3">
-                  <div class="row" id="camp_3">
-                  </div>
-               </div>
-
-               <div class="tab-pane fade" id="nav-4">
-                  <div class="row" id="camp_4">
-                  </div>
-               </div>
-
-               <div class="tab-pane fade" id="nav-5">
-                  <div class="row" id="camp_5">
-                  </div>
-               </div>
-
             </div>
-            <!-- View all Campaigns -->
-            <div class="viewallcambtn">
-               <a href="/donation/"><button>View all Campaigns</button></a>
-            </div>
-      </section>
-   </div>
 
-   <!--How it Works-->
+            <div class="tab-pane fade" id="nav-2">
+               <div class="row" id="camp_2">
+               </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-3">
+               <div class="row" id="camp_3">
+               </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-4">
+               <div class="row" id="camp_4">
+               </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-5">
+               <div class="row" id="camp_5">
+               </div>
+            </div>
+
+         </div>
+         <!-- View all Campaigns -->
+         <div class="viewallcambtn">
+            <a href="/donation/"><button>View all Campaigns</button></a>
+         </div>
+   </section>
+   <!-- Campaigns Ends -->
+
+   <!--How it Works Start-->
    <div class="hiwbg">
       <div class="container">
          <div class="row">
-            <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
+            <div class="col-12">
                <h3>How it Works?</h3>
                <h2>How to create a campaign for your cause in 3 easy steps</h2>
             </div>
-            <!--end lft-->
-            <div class="col-lg-7 col-md-7 col-xs-12 col-sm-12">
+
+            <div class="col-lg-7 col-md-7 col-xs-12 col-sm-12 d-inline d-lg-none">
                <ul>
                   <li>
                      <div class="listimg"><img src="/static/web/assets/frontend/img/about/choosecause.jpg" width="75">
@@ -625,47 +378,322 @@
                   </li>
                </ul>
             </div>
-            <!--end rgt-->
          </div>
-         <!--end row-->
-      </div>
-      <!--end containet-->
-   </div>
-   <!--End How it works-->
+         <div class="row gy-4">
+            <div class="col-lg-6 col-md-6 d-none d-lg-inline">
+               <ul id="webView">
+                  <li>
+                     <div class="listimg"><img src="/static/web/assets/frontend/img/about/choosecause.jpg" width="75">
+                     </div>
+                     <div class="hiwlist">
+                        <h3>Choose a Cause</h3>
+                        <p>Empower change by selecting a cause that you want to donate to.</p>
+                     </div>
+                  </li>
 
-   <!--How it works flow-->
-   <div class="container howworks" style="display:none;">
-      <div class="section-title">
-         <h4 class="title">How it works?</h4>
-      </div>
-      <img src="/static/web/assets/frontend/img/others/arrowLine.png" alt="" class="arrowlinen1">
-      <div class="clr"></div>
-      <img src="/static/web/assets/frontend/img/others/arrowLineDown.png" alt="" class="arrowlinen2">
-      <div class="clr"></div>
-      <div class="row">
-         <div class="col-md-4 col-lg-4">
-            <h4 class="num">1</h4>
-            <h3>Start with basics</h3>
-            <p>Kick things off with yor name and location.</p>
-         </div>
-         <div class="col-md-4 col-lg-4">
-            <h4 class="num">2</h4>
-            <h3>Tell your story</h3>
-            <p>We'll guide you with </p>
-         </div>
-         <div class="col-md-4 col-lg-4">
-            <h4 class="num">3</h4>
-            <h3>Share with friends & family</h3>
-            <p>Kick things off with yor name and location.</p>
-         </div>
-      </div>
-   </div>
-   <!-- End How it works flow-->
+            </div>
+            <div class="col-lg-6 col-md-6 d-none d-lg-inline">
+               <ul id="webView">
+                  <li>
+                     <div class="listimg"><img src="/static/web/assets/frontend/img/about/contribution.jpg" width="75">
+                     </div>
+                     <div class="hiwlist">
+                        <h3>Select your contribution</h3>
+                        <p>Provide your support with a contribution that fits your commitment and makes a meaningful
+                           impact.</p>
+                     </div>
+                  </li>
 
+            </div>
+            <div class="col-lg-6 col-md-6 d-none d-lg-inline">
+               <ul id="webView">
+                  <li>
+                     <div class="listimg"><img src="/static/web/assets/frontend/img/about/paymentproces.jpg" width="75">
+                     </div>
+                     <div class="hiwlist">
+                        <h3>Secure payment processing</h3>
+                        <p>Ensure peace of mind as you make a difference with our reliable and secure payment processing
+                           system.</p>
+                     </div>
+                  </li>
+
+            </div>
+            <div class="col-lg-6 col-md-6 d-none d-lg-inline">
+               <ul id="webView">
+                  <li>
+                     <div class="listimg"><img src="/static/web/assets/frontend/img/about/impact.jpg" width="75"></div>
+                     <div class="hiwlist">
+                        <h3>Witness the Impact</h3>
+                        <p>Experience the real change your contribution brings as you witness the positive impact on
+                           lives and communities.</p>
+                     </div>
+                  </li>
+
+            </div>
+         </div>
+      </div>
    </div>
-   <div class="logo-bottom">
-      <img src="/static/web/assets/frontend/img/low_logo.png" alt="">
-   </div>
+   <!--How it works Ends-->
+
+   <!-- About CEO Starts -->
+   <section class="aboutCeo">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-5 order-1 order-lg-0">
+               <img src="/static/web/assets/frontend/img/about/CEO.png">
+            </div>
+            <div class="col-lg-7 order-0 order-lg-1">
+               <div class="aboutCeo-content">
+                  <h2>About Our CEO</h2>
+                  <p>In the dynamic realm of philanthropy and positive impact, He stands as a visionary leader, steering
+                     the charitable trust toward new horizons. With an unwavering commitment to uplifting aspiring
+                     individuals, He epitomizes the core values of Pagirnthidu, driving the organization to be a
+                     catalyst
+                     for transformative change.</p>
+                  <p>He is not just a leader but a compassionate force driving the organization towards a brighter, more
+                     inclusive future. With a vision that inspires and a commitment that empowers, He is at the
+                     forefront
+                     of a movement that believes in the power of individuals to rise together and make a lasting
+                     difference.</p>
+                  <h3>Murali Gunasekaran</h3>
+                  <p>Founder &amp; CEO GroupPal</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- About CEO Ends -->
+
+   <!-- About Grouppal Starts -->
+   <section class="about-G-pal">
+      <div class="container">
+         <div class="row align-items-start">
+            <div class="col-lg-12 mb-5">
+               <div class="">
+                  <img src="/static/web/assets/frontend/img/others/groupal-logo.png">
+               </div>
+            </div>
+            <div class="col-lg-6">
+               <div class="about-G-pal-content">
+                  <h2>No.1 Business Sharing Platform.</h2>
+                  <p>It is specially built for grouping all tech and non-tech businesses to make it accessible for
+                     everyone
+                     and empower them to utilize the entire digital potential and opportunities under one roof.
+                  </p>
+               </div>
+            </div>
+            <div class="col-lg-6 ">
+               <h2>The CSR Initiative</h2>
+               <p>GroupPal's CSR initiative is a reflection of its commitment to creating a more connected,
+                  empowered, and inclusive business landscape. As we embark on this journey together, the vision is
+                  clear: to empower businesses, transform lives, and pave the way for a brighter and more sustainable
+                  future.
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- About Grouppal Ends -->
+
+
+   <!-- FAQ's Starts -->
+   <section class="faqSec">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6">
+               <h3>NEED HELP?</h3>
+               <h2>Answers to All Your Questions </h2>
+               <p>Have any questions or need assistance? We’re here to help!</p>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-6">
+               <div class="accordion" id="faq">
+                  <div class="card">
+                     <div class="card-header" id="faqhead1">
+                        <a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#faq1"
+                           aria-expanded="true" aria-controls="faq1">Why should I trust Pagirnthidu?</a>
+                     </div>
+                     <div id="faq1" class="collapse" aria-labelledby="faqhead1" data-parent="#faq">
+                        <div class="card-body">
+                           Pagirnthidu is a Government of India registered trust dedicated to empowering people
+                           and
+                           making a positive impact. We are committed to transparency and work diligently towards
+                           the
+                           betterment of those in need.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="faqhead2">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq2"
+                           aria-expanded="true" aria-controls="faq2">Why is Pagirnthidu better
+                           than other
+                           platforms?</a>
+                     </div>
+                     <div id="faq2" class="collapse" aria-labelledby="faqhead2" data-parent="#faq">
+                        <div class="card-body">
+                           Pagirnthidu stands out as a transparent platform where donors can trace the source and
+                           destination of their contributions. Donations made through Pagirnthidu consistently
+                           meet
+                           the intended needs of the beneficiaries.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="card-header" id="faqhead3">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq3"
+                           aria-expanded="true" aria-controls="faq3">Can I, as an individual,
+                           start a campaign?</a>
+                     </div>
+                     <div id="faq3" class="collapse" aria-labelledby="faqhead3" data-parent="#faq">
+                        <div class="card-body">
+                           Yes, anyone with a genuine need or the desire to support someone in need can initiate a
+                           campaign. However, approval is subject to verification.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end faq3 -->
+                  <div class="card">
+                     <div class="card-header" id="faqhead4">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq4"
+                           aria-expanded="true" aria-controls="faq4">How long will my campaign
+                           be posted on
+                           Pagirnthidu?</a>
+                     </div>
+                     <div id="faq4" class="collapse" aria-labelledby="faqhead4" data-parent="#faq">
+                        <div class="card-body">
+                           Campaigns will remain active until the required donations are fulfilled.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end faq4 -->
+                  <div class="card">
+                     <div class="card-header" id="faqhead5">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq5"
+                           aria-expanded="true" aria-controls="faq5">How will the raised funds
+                           be disbursed?</a>
+                     </div>
+                     <div id="faq5" class="collapse" aria-labelledby="faqhead5" data-parent="#faq">
+                        <div class="card-body">
+                           Funds will be disbursed in the form of cash or requested products, as specified by the
+                           campaign creator.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end faq5 -->
+                  <div class="card">
+                     <div class="card-header" id="faqhead6">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq6"
+                           aria-expanded="true" aria-controls="faq6">How do I donate to
+                           Pagirnthidu?</a>
+                     </div>
+                     <div id="faq6" class="collapse" aria-labelledby="faqhead6" data-parent="#faq">
+                        <div class="card-body">
+                           You can donate to Pagirnthidu by selecting a specific campaign or opting for a monthly
+                           donation plan.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6">
+               <div class="accordion" id="faq">
+                  <div class="card">
+                     <div class="card-header" id="faqhead7">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq7"
+                           aria-expanded="true" aria-controls="faq7">Do I need to enter my PAN
+                           while donating?</a>
+                     </div>
+                     <div id="faq7" class="collapse" aria-labelledby="faqhead7" data-parent="#faq">
+                        <div class="card-body">
+                           Yes, PAN card details are required for donations through Pagirnthidu, as they may be
+                           used
+                           for tax deductions.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end faq7 -->
+                  <div class="card">
+                     <div class="card-header" id="faqhead8">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq8"
+                           aria-expanded="true" aria-controls="faq8">Is my donation on
+                           Pagirnthidu secure?</a>
+                     </div>
+                     <div id="faq8" class="collapse" aria-labelledby="faqhead8" data-parent="#faq">
+                        <div class="card-body">
+                           Absolutely. Donations on Pagirnthidu are securely processed through transparent payment
+                           gateways and structures.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end faq8 -->
+                  <div class="card">
+                     <div class="card-header" id="faqhead9">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq9"
+                           aria-expanded="true" aria-controls="faq9">What payment methods are
+                           accepted on
+                           Pagirnthidu?</a>
+                     </div>
+                     <div id="faq9" class="collapse" aria-labelledby="faqhead9" data-parent="#faq">
+                        <div class="card-body">
+                           Pagirnthidu accepts multiple payment methods, including Credit card, Debit Card, UPI,
+                           and
+                           Bank Transfers.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end faq9 -->
+                  <div class="card">
+                     <div class="card-header" id="faqhead10">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq10"
+                           aria-expanded="true" aria-controls="faq10">Will I receive a
+                           receipt for my monthly
+                           donation?</a>
+                     </div>
+                     <div id="faq10" class="collapse" aria-labelledby="faqhead10" data-parent="#faq">
+                        <div class="card-body">
+                           Yes, you will receive a receipt for your monthly donations in your registered email.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end faq10 -->
+                  <div class="card">
+                     <div class="card-header" id="faqhead11">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq11"
+                           aria-expanded="true" aria-controls="faq11">Can I get a refund for
+                           my donation?</a>
+                     </div>
+                     <div id="faq11" class="collapse" aria-labelledby="faqhead11" data-parent="#faq">
+                        <div class="card-body">
+                           No, donations made on Pagirnthidu are non-refundable as they are allocated for various
+                           social causes.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end faq11 -->
+                  <div class="card">
+                     <div class="card-header" id="faqhead12">
+                        <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq12"
+                           aria-expanded="true" aria-controls="faq12">Do you have Pagirnthidu's monthly
+                           donation plans?</a>
+                     </div>
+                     <div id="faq12" class="collapse" aria-labelledby="faqhead12" data-parent="#faq">
+                        <div class="card-body">
+                           Yes, donors can unsubscribe from Pagirnthidu's Monthly Donation Plans at any time.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end faq12 -->
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- FAQ's Ends -->
+
+
+
 
    <!-- Social Share Popup -->
    <!-- Modal -->
@@ -699,6 +727,88 @@
    </div>
    <!-- End Social share -->
 
+   <!-- Brand Icon flot start -->
+   </div>
+   <div class="logo-bottom">
+      <img src="/static/web/assets/frontend/img/low_logo.png" alt="">
+   </div>
+   <!-- Brand Icon flot ends -->
+
+   <!-- footer -->
+
+   <!-- End Social share -->
+   <footer class="footer-area footersec">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3">
+               <a href="/"><img width="120px" src="/static/web/assets/frontend/img/Pagirnthidu%20Logo-wh.svg" /></a>
+               <p>India's first charitable trust with a vision to uplift aspiring individuals only who have the
+                  capability and the willingness to help others.</p>
+               <a href="/login/" class="button">Login/SignUp</a>
+            </div>
+            <!-- end col1 -->
+            <div class="col-lg-3">
+               <h3>Contact Us</h3>
+               <ul>
+                  <li>+91 98765432210</li>
+                  <li><a href="mailto:help@pagirnthidu.in">help@pagirnthidu.in</a></li>
+                  <li>523/2,Udayampalayam Road, Nava India, Coimbatore, Tamil Nadu 641028.</li>
+               </ul>
+            </div>
+            <!-- end col2 -->
+            <div class="col-lg-3">
+               <h3>Donors</h3>
+               <ul>
+                  <li><a href="/donation/">Browse Campaigns</a></li>
+                  <li><a href="/our-mission/">Monthly Mission</a></li>
+                  <li><a href="/about#testimonials">Testimonials</a></li>
+                  <li><a href="/about#faqsec">FAQS</a></li>
+               </ul>
+            </div>
+            <!-- end col3 -->
+            <div class="col-lg-3">
+               <h3>About</h3>
+               <ul>
+                  <li><a href="/about/">Our Story</a></li>
+                  <li><a href="/contact/">Contact Us</a></li>
+                  <li><a href="/terms-condition/">Terms of Use</a></li>
+                  <li><a href="/privacy-policy/">Privacy Policy</a></li>
+               </ul>
+            </div>
+            <!-- end col4 -->
+         </div>
+         <!-- end row -->
+         <hr>
+         <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <ul class="social_links">
+                  <li><a href=""><i class=""><img width="14px"
+                              src="/static/web/assets/frontend/img/twitter.png" /></i></a></li>
+                  <li><a href="https://m.facebook.com/pagirnthidu/" target="_blank"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li><a href="https://in.linkedin.com/showcase/pagirnthidu/" target="_blank"><i
+                           class="fa fa-linkedin"></i></a></li>
+                  <li><a href=""><i class="fa fa-instagram"></i></a></li>
+               </ul>
+            </div>
+            <!-- end col -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+               <p>Copyright © <span id="year"></span> Pagirnthidu by <a href="https://www.grouppal.com/" target="_blank"
+                     class="link">GroupPal</a>. All Rights Reserved.</p>
+            </div>
+            <!-- end col -->
+         </div>
+         <!-- end row -->
+      </div>
+   </footer>
+
+   <div class="back-to-top">
+      <span class="back-top">
+         <i class="fas fa-angle-up"></i>
+      </span>
+   </div>
+
+   <!-- scripts -->
 
    <script>
       $(document).ready(function () {
@@ -882,83 +992,6 @@
 
    </script>
 
-
-   <!-- footer -->
-
-   <!-- End Social share -->
-   <footer class="footer-area footersec">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-3">
-               <a href="/"><img width="120px" src="/static/web/assets/frontend/img/Pagirnthidu%20Logo-wh.svg" /></a>
-               <p>India's first charitable trust with a vision to uplift aspiring individuals only who have the
-                  capability and the willingness to help others.</p>
-               <a href="/login/" class="button">Login/SignUp</a>
-            </div>
-            <!-- end col1 -->
-            <div class="col-lg-3">
-               <h3>Contact Us</h3>
-               <ul>
-                  <li>+91 98765432210</li>
-                  <li><a href="mailto:help@pagirnthidu.in">help@pagirnthidu.in</a></li>
-                  <li>523/2,Udayampalayam Road, Nava India, Coimbatore, Tamil Nadu 641028.</li>
-               </ul>
-            </div>
-            <!-- end col2 -->
-            <div class="col-lg-3">
-               <h3>Donors</h3>
-               <ul>
-                  <li><a href="/donation/">Browse Campaigns</a></li>
-                  <li><a href="/our-mission/">Monthly Mission</a></li>
-                  <li><a href="/about#testimonials">Testimonials</a></li>
-                  <li><a href="/about#faqsec">FAQS</a></li>
-               </ul>
-            </div>
-            <!-- end col3 -->
-            <div class="col-lg-3">
-               <h3>About</h3>
-               <ul>
-                  <li><a href="/about/">Our Story</a></li>
-                  <li><a href="/contact/">Contact Us</a></li>
-                  <li><a href="/terms-condition/">Terms of Use</a></li>
-                  <li><a href="/privacy-policy/">Privacy Policy</a></li>
-               </ul>
-            </div>
-            <!-- end col4 -->
-         </div>
-         <!-- end row -->
-         <hr>
-         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-               <ul class="social_links">
-                  <li><a href=""><i class=""><img width="14px"
-                              src="/static/web/assets/frontend/img/twitter.png" /></i></a></li>
-                  <li><a href="https://m.facebook.com/pagirnthidu/" target="_blank"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li><a href="https://in.linkedin.com/showcase/pagirnthidu/" target="_blank"><i
-                           class="fa fa-linkedin"></i></a></li>
-                  <li><a href=""><i class="fa fa-instagram"></i></a></li>
-               </ul>
-            </div>
-            <!-- end col -->
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-               <p>Copyright © <span id="year"></span> Pagirnthidu by <a href="https://www.grouppal.com/" target="_blank"
-                     class="link">GroupPal</a>. All Rights Reserved.</p>
-            </div>
-            <!-- end col -->
-         </div>
-         <!-- end row -->
-      </div>
-   </footer>
-
-   <div class="back-to-top">
-      <span class="back-top">
-         <i class="fas fa-angle-up"></i>
-      </span>
-   </div>
-
-   <!-- scripts -->
-
    <!-- load all script -->
 
 
@@ -1038,6 +1071,8 @@
       }(jQuery));
 
    </script>
+
+   <script src="/static/web/assets/frontend/js/custom.script.js"></script>
 
 </body>
 

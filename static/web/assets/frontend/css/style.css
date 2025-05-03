@@ -10816,9 +10816,9 @@ input[type=radio] {
     margin-left: 10px;
 }
 
-.caption div:last-child p {
+/* .caption div:last-child p {
     color: #6D8191 !important;
-}
+} */
 
 .slider-content p>span {
     font-size: 14px;

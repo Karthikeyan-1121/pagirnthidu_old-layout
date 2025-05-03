@@ -1,0 +1,308 @@
+/* Universel CSS */
+* h2 {
+    font-weight: 600;
+}
+
+/* Navigation bar CSS*/
+.navbar-area.nav-style-01 {
+    background-color: white;
+}
+
+.navbar-area.nav-style-01 .nav-container {
+    background-color: white;
+}
+
+.navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li a {
+    color: #29323D;
+}
+
+.navbar-area .nav-container .navbar-collapse .navbar-nav li a:not(.dropdown-menu .dropdown-item) {
+    margin-left: 24px;
+}
+
+.navbar.navbar-area.nav-style-01 .navbar-toggler-icon {
+    background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M4%208H28ZM4%2016H28ZM4%2024H28Z%22%20fill%3D%22white%22%2F%3E%3Cpath%20d%3D%22M4%208H28M4%2016H28M4%2024H28%22%20stroke%3D%22%232E2D2D%22%20stroke-width%3D%222%22%20stroke-miterlimit%3D%2210%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E);
+    /* background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJmaV8yNzMyNjU3Ij48cGF0aCBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Im01LjAwMDczIDE3LjU4NjRjLS4zOTA1LjM5MDYtLjM5MDQ0IDEuMDIzNy4wMDAxMiAxLjQxNDJzMS4wMjM3Mi4zOTA1IDEuNDE0MjEtLjAwMDFsNS41ODUyNC01LjU4NjIgNS41ODU3IDUuNTg1N2MuMzkwNS4zOTA1IDEuMDIzNy4zOTA1IDEuNDE0MiAwcy4zOTA1LTEuMDIzNyAwLTEuNDE0MmwtNS41ODU4LTUuNTg1OCA1LjU4NTQtNS41ODYzOGMuMzkwNC0uMzkwNTYuMzkwNC0xLjAyMzcyLS4wMDAyLTEuNDE0MjEtLjM5MDUtLjM5MDUtMS4wMjM3LS4zOTA0NC0xLjQxNDIuMDAwMTJsLTUuNTg1MyA1LjU4NjI3LTUuNTg1NzItNS41ODU3OWMtLjM5MDUyLS4zOTA1Mi0xLjAyMzY5LS4zOTA1Mi0xLjQxNDIxIDAtLjM5MDUzLjM5MDUzLS4zOTA1MyAxLjAyMzY5IDAgMS40MTQyMmw1LjU4NTkzIDUuNTg1ODd6IiBmaWxsPSJyZ2IoMCwwLDApIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjwvcGF0aD48L3N2Zz4=); */
+}
+
+.navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li {
+    line-height: 80px;
+}
+
+.dropdown-menu .dropdown-item {
+    line-height: 50px;
+    width: 100%;
+    margin-left: unset;
+    padding-left: 24px;
+}
+
+.dropdown-menu {
+    min-width: 16rem;
+}
+
+.req-cam-btn {
+    padding: unset;
+    font-size: 14px;
+    color: #29323D !important;
+}
+
+#loginBtn {
+    background-color: #FEF9F6;
+    color: #FE6401;
+    padding: 7px 10px;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.btn-resp li {
+    list-style: none;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 3s ease !important;
+}
+
+@media only screen and (max-width:992px) {
+    .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li {
+        line-height: 40px;
+    }
+
+    .navbar-area .nav-container .navbar-collapse .navbar-nav li a:not(.dropdown-menu .dropdown-item) {
+        margin-left: 18px;
+    }
+
+    .logo-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .logo-wrapper ul {
+        margin: unset;
+    }
+
+    .req-cam-btn {
+        color: #29323D !important;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:360px) {
+    .logo-wrapper {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .logo-wrapper ul {
+        margin-top: 20px;
+    }
+}
+
+/* Footer CSS */
+.footer-area {
+    margin: unset;
+}
+
+/* About CSS */
+.aboutsec {
+    padding: 60px 0;
+}
+
+.abtbgimg {
+    margin: unset;
+    overflow: hidden;
+    border-radius: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abtbgimg img {
+    height: 100%;
+}
+
+@media only screen and (max-width:992px) {
+    .abtbgimg {
+        display: none;
+    }
+}
+
+/* How It Works CSS */
+.listbdr {
+    padding: 25px 0;
+}
+
+#webView li {
+    flex-direction: column;
+}
+
+#webView .hiwlist {
+    margin-top: 20px;
+}
+
+/* About CEO CSS */
+.aboutCeo img {
+    width: 100%;
+}
+
+.aboutCeo-content {
+    padding-left: 35px;
+}
+
+@media only screen and (max-width:992px) {
+    .aboutCeo img {
+        margin-top: 15px;
+    }
+
+    .aboutCeo-content {
+        padding: unset;
+    }
+}
+
+/* About Grouppal CSS */
+.about-G-pal {
+    background-color: #F7F7F9;
+}
+
+.about-G-pal h3,
+.faqSec h3 {
+    color: #FFBC2E;
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+/* FAQ's CSS */
+.faqSec .card-header {
+    background-color: transparent;
+    border: unset;
+    padding-left: 0;
+}
+
+.faqSec .accordion :first-child {
+    border: unset;
+}
+
+.faqSec .card-header a {
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+}
+
+.faqSec .btn {
+    padding: .375rem 0;
+}
+
+.faqSec .btn:focus {
+    box-shadow: unset;
+}
+
+.faqSec .card {
+    border: unset;
+    border-bottom: 1px solid lightgrey;
+    border-top: 1px solid lightgrey;
+    background-color: transparent;
+}
+
+.faqSec .card :nth-child(2) {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.faqSec .accordion>.card>.card-header {
+    margin: unset;
+}
+
+.accordion .card .show :active .accordion .card {
+    background-color: #FFBC2E;
+}
+
+
+/* Campaigns CSS */
+.Campaigns-sec {
+    background-color: #fffaf7;
+}
+
+.nav-tabs .nav-link:hover {
+    border: 1px solid transparent;
+}
+
+.Campaigns-sec .caption .title {
+    text-transform: capitalize;
+    min-height: unset !important;
+}
+
+.thumbnail .caption {
+    margin: unset;
+}
+
+.Campaigns-sec .thumbnail {
+    transition: all 200ms ease-out;
+}
+
+.Campaigns-sec .thumbnail:hover {
+    box-shadow: -4px 4px 10px 0px #e2dada78;
+    transition: all 200ms ease-out;
+}
+
+.Campaigns-sec .thumbnail:hover .title {
+    color: #2b2a35;
+}
+
+.caption {
+    padding: 20px;
+}
+
+.btnS a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #FE6401;
+    padding: 10px 0;
+    width: 48%;
+    border-radius: 7px;
+    transition: all 200ms ease-in-out;
+}
+
+.btnS a:first-child {
+    border: 1px solid #6e6e6e;
+}
+
+.btnS a:first-child p {
+    color: #29323D;
+    margin-left: 10px;
+}
+
+.btnS a:last-child {
+    background-color: #FE6401;
+}
+
+.btnS a p {
+    margin: unset;
+    color: white;
+    font-weight: 500;
+}
+
+.shareBtn img {
+    height: 20px;
+}
+
+.btnS a:last-child:hover .donateBtn {
+    scale: 1.1;
+    transition: all 200ms ease-in-out;
+}
+
+.Campaigns-sec .thumbnail {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
