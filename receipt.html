@@ -3,56 +3,27 @@
 
 <head>
     <title>Donation receipt - Pagirnthidu Foundation</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- html2pdf.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
-        /* A4 print size setup */
         @page {
             size: A4;
             margin: 20mm;
         }
 
-        @media print {
-            body {
-                -webkit-print-color-adjust: exact;
-                /* Ensures background and colors are printed */
-                print-color-adjust: exact;
-            }
-
-            #printArea {
-                width: 100%;
-                page-break-after: avoid;
-            }
-
-            /* Hide other content if needed */
-            body * {
-                visibility: hidden;
-            }
-
-            #printArea,
-            #printArea * {
-                visibility: visible;
-            }
-
-            #printArea {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-        }
-
-        /* Optional styling for screen */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 50px 5px 50px 5px;
+            padding: 50px 5px;
             background: white;
+            color: #4f4f4e;
         }
 
         #printArea {
@@ -71,26 +42,25 @@
     </style>
 </head>
 
-<body style="color: #4f4f4e;">
+<body>
 
     <section id="printArea" class="h-100"
         style="display: flex; flex-direction: column; justify-content: space-between;">
         <div>
             <div class="brand-logo w-100 d-flex justify-content-center">
-                <img src="static/web/assets/frontend/img/Pagirnthidu%20Logo.svg" alt="">
+                <img src="static/web/assets/frontend/img/Pagirnthidu%20Logo.svg" alt="" width="150">
             </div>
             <div class="contactInfo mt-2 mb-2 text-center">
                 <h6>Pagirnthidu Foundation</h6>
                 <p>#523/2, Udayampalayam Road, Nava India, Coimbatore, Tamil Nadu 641028.</p>
                 <h1 style="font-size: 24px;">ACKNOWLEDGEMENT OF PAYMENT</h1>
             </div>
-
             <hr>
             <p class="m-0">Receipt No: 8935379</p>
             <p class="m-0">Date: 13-05-2025</p>
             <p class="mt-3">Received with thanks from
                 <span style="font-weight: bold; color: #d4880d;">Karthikeyan E</span>
-                ( karthikeyan.e@grouppal.in), a donation of
+                (karthikeyan.e@grouppal.in), a donation of
                 <span style="font-weight: bold; color: #d4880d;">Rs.500/-</span>
                 i.e Five Hundred Rupees, through
                 <a style="color: #4f4f4e;" href="https://pagirnthidu.in" target="_blank">pagirnthidu.in</a>,
@@ -107,7 +77,7 @@
 
             <p class="mt-3 mb-2">Details of campaign:</p>
             <p class="m-0">Campaign name - 6 Years Old My Son Needs Your Help To Recover From Ewing's Sarcoma
-                (<a href="" style="color: #d4880d;">
+                (<a href="https://pagirnthidu.in/fundraisers/help-son-of-sasi-kumar-recover-g2" style="color: #d4880d;">
                     https://pagirnthidu.in/fundraisers/help-son-of-sasi-kumar-recover-g2
                 </a>).
             </p>
@@ -117,15 +87,11 @@
 
             <p class="mt-3 mb-2">Thank you so much for your support and contribution!</p>
             <br>
-
             <i>This document is only an acknowledgement of your payment. If you have donated to an
                 organization, which is offering tax-exemption, you will receive the tax-exemption receipt once
                 the NGO issues it.
             </i>
-
         </div>
-
-
 
         <footer class="text-center">
             <hr>
@@ -137,16 +103,33 @@
         </footer>
     </section>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Auto-download as PDF -->
+    <script>
+        window.onload = function () {
+            const element = document.getElementById('printArea');
+            const options = {
+                margin: 10,
+                filename: 'Pagirnthidu_Receipt_8935379.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().set(options).from(element).save().then(() => {
+                // Wait 1 second after download, then close
+                setTimeout(() => {
+                    window.open('receipt.html', '_blank');
+                    window.close();
+                }, 1000);
+            });
+        };
+    </script>
 
 
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
