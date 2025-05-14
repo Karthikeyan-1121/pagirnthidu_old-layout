@@ -13,15 +13,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
+        @media screen {
+            body {
+                padding: 50px 5px;
+            }
+        }
+
+        @media print {
+            #printArea {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            footer {
+                margin-top: auto;
+            }
+        }
+
         @page {
             size: A4;
             margin: 20mm;
         }
 
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 50px 5px;
             background: white;
             color: #4f4f4e;
         }
@@ -30,10 +49,14 @@
             max-width: 800px;
             margin: auto;
             background: white;
+            /*  min-height: 100vh; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         hr {
-            border: 1px solid #ccc;
+            border: 1px solid #858282;
         }
 
         a {
@@ -43,9 +66,7 @@
 </head>
 
 <body>
-
-    <section id="printArea" class="h-100"
-        style="display: flex; flex-direction: column; justify-content: space-between;">
+    <section id="printArea">
         <div>
             <div class="brand-logo w-100 d-flex justify-content-center">
                 <img src="static/web/assets/frontend/img/Pagirnthidu%20Logo.svg" alt="" width="150">
@@ -57,7 +78,7 @@
             </div>
             <hr>
             <p class="m-0">Receipt No: 8935379</p>
-            <p class="m-0">Date: 13-05-2025</p>
+            <p class="m-0">Date: 14-05-2025</p>
             <p class="mt-3">Received with thanks from
                 <span style="font-weight: bold; color: #d4880d;">Karthikeyan E</span>
                 (karthikeyan.e@grouppal.in), a donation of
@@ -71,9 +92,9 @@
             </p>
 
             <p class="mt-3 mb-2">Details of your donation:</p>
-            <p class="m-0">Payment mode - Online</p>
-            <p class="m-0">Date of donation - 13-05-2025</p>
-            <p class="m-0">Phone number - +91-9524121040</p>
+            <p class="m-0">Payment mode: Online</p>
+            <p class="m-0">Date of donation: 14-05-2025</p>
+            <p class="m-0">Phone number: +91-9524121040</p>
 
             <p class="mt-3 mb-2">Details of campaign:</p>
             <p class="m-0">Campaign name - 6 Years Old My Son Needs Your Help To Recover From Ewing's Sarcoma
@@ -101,33 +122,36 @@
                 <a href="mailto:help@pagirnthidu.in" style="color: #d4880d;">help@pagirnthidu.in</a>
             </p>
         </footer>
+
     </section>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 
-    <!-- Auto-download as PDF -->
-    <script>
+    <!-- To download the PDF, then close the page and redirect to the previous page -->
+    <!-- <script>
         window.onload = function () {
             const element = document.getElementById('printArea');
             const options = {
                 margin: 10,
-                filename: 'Pagirnthidu_Receipt_8935379.pdf',
+                filename: 'Pagirnthidu_Receipt_0012345.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
+                html2canvas: { scale: 1 },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
             };
 
             html2pdf().set(options).from(element).save().then(() => {
-                // Wait 1 second after download, then close
                 setTimeout(() => {
-                    window.open('receipt.html', '_blank');
                     window.close();
+                    setTimeout(() => {
+                        window.location.replace(document.referrer || '/');
+                    }, 500);
                 }, 1000);
             });
         };
-    </script>
+    </script> -->
+
 
 
 </body>
