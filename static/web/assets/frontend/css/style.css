@@ -10816,9 +10816,6 @@ input[type=radio] {
     margin-left: 10px;
 }
 
-/* .caption div:last-child p {
-    color: #6D8191 !important;
-} */
 
 .slider-content p>span {
     font-size: 14px;
@@ -10847,9 +10844,6 @@ input[type=radio] {
     display: flex;
 }
 
-.support p {
-    width: 50%;
-}
 
 /* .support p:last-child{
     text-align: right;
@@ -13000,6 +12994,7 @@ select {
 
 .mycampaign .support .fr {
     float: right;
+
 }
 
 .mainmenu2 li a .active {
@@ -13046,6 +13041,7 @@ select {
 
 
 /*Footer*/
+.footersec {}
 
 .footersec .logo {
     margin-bottom: 15px;
@@ -13408,6 +13404,7 @@ select {
 .contactfrm .iti__flag-container {
     position: absolute;
     top: -20px !important;
+    ;
     bottom: 0;
     right: 0;
     padding: 1px;
@@ -13424,7 +13421,6 @@ select {
 .termstxt {
     text-align: justify;
 }
-
 
 
 .termstxt .listn li {
@@ -13721,4 +13717,318 @@ select {
     border: 1px #bac6e8 solid;
     border-radius: 25px;
     padding: 53px;
+}
+
+
+
+/* Ensure file input label adapts to the selected file */
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Change";
+    /* Custom text when file is selected */
+}
+
+
+.fixed-left-button {
+    position: fixed;
+    left: 10px;
+    /* Adjust for margin */
+    bottom: 20px;
+    /* Position at bottom-left */
+    z-index: 1050;
+    /* Ensure it stays above content */
+}
+
+.td-limit {
+    max-width: 70px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Display the selected file name */
+#fileName {
+    margin-top: 5px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+    /* Reduced margin between form fields */
+}
+
+.text-danger {
+    font-size: 0.75rem;
+    /* Smaller font size */
+    color: #e74c3c;
+    /* Red color for errors */
+    margin-top: 3px;
+    font-weight: 400;
+}
+
+.required {
+    color: #e74c3c;
+    ;
+}
+
+.form-group input:focus:invalid {
+    border-color: #e74c3c;
+    /* Red border when input is focused and invalid */
+}
+
+.message {
+    color: #dc3545;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.alert-warning {
+    background-color: #f39c12;
+    /* Yellow background for warning messages */
+}
+
+input[type="checkbox"] {
+    accent-color: rgb(28, 104, 28);
+}
+
+.form-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-slider {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.form-section {
+    min-width: 100%;
+    padding: 0px;
+}
+
+.btn-toggle-group .btn {
+    border-radius: 0;
+}
+
+.btn-toggle-group .btn:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.btn-toggle-group .btn:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btn-toggle-group .btn.active {
+    background-color: #FF6600;
+    color: white;
+    border-color: #FF6600;
+}
+
+.form_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100;
+    margin: auto;
+}
+
+.toggle-option {
+    flex: 1;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-option.active {
+    background-color: #FF6600;
+    color: white;
+}
+
+.custom-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 70px;
+}
+
+.custom-card img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.custom-card .card-content {
+    flex: 1;
+}
+
+.custom-card .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-card .card-author {
+    font-size: 14px;
+    color: #f56a00;
+}
+
+#amount_boarder {
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.tip-container {
+    background-color: #fff7f0;
+    border: 1px solid #f5e5dc;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 13px;
+    width: 100%;
+    height: 120px;
+}
+
+.tip-container .tip-text {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.tip-container .support-text {
+    font-weight: bold;
+    color: #333;
+}
+
+.tip-select {
+    width: auto;
+    display: inline-block;
+    margin-left: 110px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar-area {
+        position: absolute;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent background */
+        z-index: 10;
+    }
+
+    .navbar-toggler {
+        z-index: 11;
+        /* Ensure toggler appears above navbar content */
+    }
+
+    .bottom-image img {
+        margin-top: 40px;
+        /* Offset the image to avoid overlap with the navbar */
+    }
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%
+}
+
+#password-input {
+    padding-right: 30px;
+    /* Add space for the eye icon */
+    width: 100%;
+    /* Adjust width as needed */
+    font-size: 16px;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    /* Adjust spacing to align the icon */
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.small-icon {
+    width: 100px;
+    height: 100px;
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+p {
+    margin: 10px 0;
+}
+
+#span_id {
+    padding-right: 20px;
+}
+
+
+
+._failed {
+    border-bottom: solid 4px red !important;
+}
+
+._failed i {
+    color: red !important;
+}
+
+._cancel {
+    border-bottom: solid 4px yellow !important;
+}
+
+._cancel i {
+    color: yellow !important;
+}
+
+._success {
+    box-shadow: 0 15px 25pxrgba(253, 216, 8, 0.1);
+    padding: 45px;
+    width: 100%;
+    text-align: center;
+    margin: 40px auto;
+    border-bottom: solid 4px #28a745;
+}
+
+._success i {
+    font-size: 55px;
+    color: #28a745;
+}
+
+._success h2 {
+    margin-bottom: 12px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+._success p {
+    margin-bottom: 0px;
+    font-size: 18px;
+    color: #495057;
+    font-weight: 500;
 }
