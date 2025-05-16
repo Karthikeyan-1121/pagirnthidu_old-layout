@@ -1021,3 +1021,17 @@ fieldset[disabled] .form-control .tab-content .form-group label {
     height: 7px;
     transform: translate(-50%, calc(-50% - 2px));
 }
+
+
+/* Payment message CSS  */
+.downloadBtn {
+    padding: 10px 15px;
+    background-color: green;
+    margin-top: 25px;
+    color: white;
+    border-radius: 4px;
+}
+
+._success p {
+    margin-bottom: 30px;
+}

@@ -152,6 +152,109 @@
         };
     </script>
 
+
+
+
+    <!-- For PDF Generation + Redirect + Mail | update the following-->
+
+    <!-- <script>
+        window.onload = function () {
+            const element = document.getElementById('printArea');
+
+            element.style.height = "1122px";
+            element.style.overflow = "hidden";
+
+            const options = {
+                margin: 0,
+                filename: 'Pagirnthidu_Receipt_0012345.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 1, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().set(options).from(element).outputPdf('blob').then((pdfBlob) => {
+                // Send to server via fetch
+                const formData = new FormData();
+                formData.append("pdf", pdfBlob, "Pagirnthidu_Receipt_0012345.pdf");
+                formData.append("email", "user@example.com"); // Replace with dynamic email if needed
+
+                fetch("http://localhost:5000/send-pdf", {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(res => res.text())
+                    .then(response => console.log("Server:", response))
+                    .catch(err => console.error("Error sending PDF to server:", err));
+
+                // Optional: download PDF locally
+                html2pdf().set(options).from(element).save();
+
+                setTimeout(() => {
+                    window.close();
+                    setTimeout(() => {
+                        window.location.replace(document.referrer || '/');
+                    }, 500);
+                }, 1000);
+            });
+        };
+    </script> -->
+
+    <!-- Install dependencies -->
+    <!-- pip install flask python-dotenv -->
+
+
+    <!-- server.py -->
+    <!-- from flask import Flask, request
+    import smtplib
+    from email.message import EmailMessage
+    import os
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
+    app = Flask(__name__)
+
+    @app.route('/send-pdf', methods=['POST'])
+    def send_pdf():
+    if 'pdf' not in request.files or 'email' not in request.form:
+    return "Missing file or email", 400
+
+    pdf = request.files['pdf']
+    recipient_email = request.form['email']
+
+    msg = EmailMessage()
+    msg['Subject'] = 'Your Pagirnthidu Receipt'
+    msg['From'] = os.getenv("SMTP_SENDER")
+    msg['To'] = recipient_email
+    msg.set_content("Please find your receipt attached.")
+
+    # Attach PDF
+    pdf_data = pdf.read()
+    msg.add_attachment(pdf_data, maintype='application', subtype='pdf', filename=pdf.filename)
+
+    # Send using SMTP
+    try:
+    with smtplib.SMTP_SSL(os.getenv("SMTP_SERVER"), int(os.getenv("SMTP_PORT"))) as smtp:
+    smtp.login(os.getenv("SMTP_USER"), os.getenv("SMTP_PASSWORD"))
+    smtp.send_message(msg)
+    return "Email sent successfully"
+    except Exception as e:
+    return f"Failed to send email: {e}", 500
+
+    if __name__ == '__main__':
+    app.run(debug=True) -->
+
+    <!-- .env file -->
+    <!-- SMTP_SERVER=smtp.gmail.com
+    SMTP_PORT=465
+    SMTP_USER=your_email@gmail.com
+    SMTP_PASSWORD=your_app_password
+    SMTP_SENDER=your_email@gmail.com -->
+
+
+
+
+
 </body>
 
 </html>
