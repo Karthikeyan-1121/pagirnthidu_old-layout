@@ -138,6 +138,18 @@
       </nav>
    </header>
 
+   <section id="toast" class="error">
+      <div id="icon-wrapper">
+         <div id="icon"></div>
+      </div>
+      <div id="toast-message">
+         <h4>Error Title</h4>
+         <p>Descriptive Message.</p>
+      </div>
+      <button id="toast-close"></button>
+      <div id="timer"></div>
+   </section>
+
 
    <!-- Stepper Starts -->
    <section class="stepperSec">
@@ -244,8 +256,7 @@
                                                 <label class="btn btn-default" for="weekly-donate">Weekly</label>
                                              </div>
                                              <div class="button">
-                                                <input type="radio" id="monthly-donate" name="donation-frequency"
-                                                   checked />
+                                                <input type="radio" id="monthly-donate" name="donation-frequency" />
                                                 <label class="btn btn-default" for="monthly-donate">Monthly</label>
                                              </div>
                                              <div class="button">
@@ -278,7 +289,6 @@
                               <div class="tab-pane fade in" role="tabpanel" id="stepper-step-2">
                                  <p><span>Step 2</span></p>
                                  <h2>Personal Information</h2>
-                                 <!-- First name, last name, PAN, Aadhar, Address (resident/permanent), Mobile No. -->
                                  <div class="userInformation-basic">
                                     <div class="row form-group">
                                        <div class="col-12 d-none">
@@ -399,7 +409,7 @@
 
                               <div class="tab-pane fade in" role="tabpanel" id="stepper-step-3">
                                  <p><span>Step 3</span></p>
-                                 <h2>Donation Summery</h2>
+                                 <h2>Donation Summary</h2>
                                  <div class="summery-data">
                                     <div class="row align-items-center">
                                        <div class="col-lg-8 order-0 order-lg-1">
@@ -448,7 +458,7 @@
                                                 <p id="user-address-city">Coimbatore -</p>
                                                 <p id="user-address-postal">641028,</p>
                                                 <p id="user-address-state">Tamilnadu,</p>
-                                                <p id="user-address-country">INDIA,</p>
+                                                <p id="user-address-country">INDIA.</p>
                                              </div>
                                              <div>
                                                 <p id="user-address-permanent" class="d-none">This is my permanent
@@ -466,20 +476,14 @@
                                     </div>
                                  </div>
 
-
-
-
-
-
-
-
-
                                  <ul class="list-inline pull-right">
                                     <li>
                                        <a class="btn btn-default prev-step">Back</a>
                                     </li>
                                     <li>
-                                       <a class="btn btn-primary Submit">Submit, Proceed to Pay</a>
+                                       <a class="btn btn-primary Submit" id="errorBtn" onclick="openToast('error')">
+                                          Submit, Proceed to Pay
+                                       </a>
                                     </li>
                                  </ul>
                               </div>

@@ -170,6 +170,12 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('input[required], select[required], textarea[required]').each(function () {
         var $input = $(this);
+
+        // Skip radio inputs
+        if ($input.attr('type') === 'radio') {
+            return;
+        }
+
         var $label = $input.closest('.form-group, .form-field, .form-row, div').find('label').first();
 
         // Avoid duplicates
@@ -333,3 +339,61 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial setup
     customAmountField.style.display = document.getElementById("dC").checked ? "block" : "none";
 });
+
+
+/* Error Toaster */
+const toast = document.querySelector("#toast");
+const toastTimer = document.querySelector("#timer");
+const closeToastBtn = document.querySelector("#toast-close");
+
+let countdown;
+
+// Helper to reset animation
+const resetAnimation = (el) => {
+    el.style.animation = 'none';
+    el.offsetHeight; // Force reflow
+    el.style.animation = '';
+};
+
+// Close toast
+const closeToast = () => {
+    resetAnimation(toast);
+    toast.style.animation = "close 0.4s ease-in forwards";
+    toastTimer.classList.remove("timer-animation");
+    clearTimeout(countdown);
+
+    setTimeout(() => {
+        toast.style.visibility = "hidden";
+        toast.style.pointerEvents = "none";
+    }, 400); // Match close animation
+};
+
+// Open toast with pulse glow
+const openToast = (type = "error") => {
+    toast.className = type; // Apply type class
+    resetAnimation(toast);
+
+    // Show + Animate with pulse
+    toast.style.visibility = "visible";
+    toast.style.pointerEvents = "auto";
+    toast.style.animation = "open 0.4s ease-out forwards, pulse-glow 1.2s ease-out";
+
+    // Restart timer animation
+    toastTimer.classList.remove("timer-animation");
+    void toastTimer.offsetWidth;
+    toastTimer.classList.add("timer-animation");
+
+    // Clear old timer, start new
+    clearTimeout(countdown);
+    countdown = setTimeout(() => {
+        closeToast();
+    }, 10000);
+
+    // Remove pulse-glow after it finishes
+    setTimeout(() => {
+        toast.style.animation = "open 0.4s ease-out forwards";
+    }, 1200);
+};
+
+// Close button listener
+closeToastBtn.addEventListener("click", closeToast);
