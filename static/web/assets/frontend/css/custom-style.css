@@ -1030,8 +1030,23 @@ fieldset[disabled] .form-control .tab-content .form-group label {
     margin-top: 25px;
     color: white;
     border-radius: 4px;
+    transition: all 50ms ease-in;
+}
+
+.downloadBtn:hover {
+    color: white;
+    background-color: rgb(2, 98, 2);
+    transition: all 50ms ease-in;
 }
 
 ._success p {
     margin-bottom: 30px;
+}
+
+._success p span {
+    font-weight: 400;
+}
+
+._success h6 a {
+    text-decoration: underline;
 }

@@ -129,16 +129,24 @@
         window.onload = function () {
             const element = document.getElementById('printArea');
 
-            // Limit height to one A4 page in pixels (approx. 1122px for 96dpi)
+            // Let it grow dynamically based on content (no fixed height)
             element.style.height = "1122px";
             element.style.overflow = "hidden";
 
             const options = {
                 margin: 0,
-                filename: 'Pagirnthidu_Receipt_0012345.pdf',
+                filename: 'Pagirnthidu_Receipt_000012526.pdf',
                 image: { type: 'jpeg', quality: 1 },
-                html2canvas: { scale: 1, scrollY: 0 },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                html2canvas: {
+                    scale: 3,         // Increase for better resolution (2 or 3 is ideal)
+                    scrollY: 0,
+                    useCORS: true     // Enable if you use external images/fonts
+                },
+                jsPDF: {
+                    unit: 'pt',       // Better resolution matching
+                    format: 'a4',
+                    orientation: 'portrait'
+                }
             };
 
             html2pdf().set(options).from(element).save().then(() => {
