@@ -448,7 +448,7 @@
                                           </div>
                                        </div>
 
-                                       <div class="col-lg-6">
+                                       <div class="col-lg-8">
                                           <div class="currentAddress mt-3">
                                              <h4>My Address</h4>
                                              <div class="d-flex flex-wrap">
@@ -469,10 +469,13 @@
                                                    </strong>
                                                 </p>
                                              </div>
+                                             <div>
+                                                <p class="notes_M">NOTE: You will receieve the donation invoice via the
+                                                   given Mail ID
+                                                </p>
+                                             </div>
                                           </div>
                                        </div>
-                                       <div class="col-lg-2 d-none d-lg-block"></div>
-
                                     </div>
                                  </div>
 
@@ -504,11 +507,7 @@
 
 
 
-   <!-- Brand Icon flot start -->
-   <div class="logo-bottom">
-      <img src="static/web/assets/frontend/img/low_logo.png" alt="">
-   </div>
-   <!-- Brand Icon flot ends -->
+
 
    <!-- footer -->
    <footer class="footer-area footersec">
@@ -574,28 +573,22 @@
          </div>
          <!-- end row -->
       </div>
-   </footer>
 
-   <div class="back-to-top">
-      <span class="back-top">
-         <i class="fas fa-angle-up"></i>
-      </span>
-   </div>
 
-   <!-- scripts -->
+      <!-- scripts -->
 
-   <script>
-      $(document).ready(function () {
-         $.ajax({
-            url: "/campaigns/",  // Use the correct URL pattern
-            type: "GET",
-            data: { category: "all" },
-            dataType: "json",
-            success: function (response) {
-               let htmlContent = "";
-               if (response.campaigns.length > 0) {
-                  response.campaigns.forEach(function (datas) {
-                     htmlContent += `
+      <script>
+         $(document).ready(function () {
+            $.ajax({
+               url: "/campaigns/",  // Use the correct URL pattern
+               type: "GET",
+               data: { category: "all" },
+               dataType: "json",
+               success: function (response) {
+                  let htmlContent = "";
+                  if (response.campaigns.length > 0) {
+                     response.campaigns.forEach(function (datas) {
+                        htmlContent += `
                                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                                     <div class="thumbnail">
                                           <a href="${datas.donation_url}">
@@ -627,36 +620,36 @@
                                           </div>
                                     </div>
                                  </div>`;
-                  });
-               } else {
-                  htmlContent = `<div class="row ml-5"><h5 class="text-center">No Campaign Available</h5></div>`;
+                     });
+                  } else {
+                     htmlContent = `<div class="row ml-5"><h5 class="text-center">No Campaign Available</h5></div>`;
+                  }
+                  $("#all_camp").html(htmlContent);
+               },
+               error: function (xhr, status, error) {
+                  console.log("Error fetching data:", error);
                }
-               $("#all_camp").html(htmlContent);
-            },
-            error: function (xhr, status, error) {
-               console.log("Error fetching data:", error);
-            }
+            });
+
+            $(".category-tab").on("click", function () {
+               let category_id = $(this).data("category-id"); // Get category ID
+               console.log(category_id);
+               fetchCampaigns(category_id);
+            });
          });
 
-         $(".category-tab").on("click", function () {
-            let category_id = $(this).data("category-id"); // Get category ID
-            console.log(category_id);
-            fetchCampaigns(category_id);
-         });
-      });
+         function fetchCampaigns(category_id) {
+            $.ajax({
+               url: "/campaigns/", // Pass category_id as a query param
+               type: "GET",
+               data: { category: category_id },
+               dataType: "json",
+               success: function (response) {
+                  let htmlContent = "";
 
-      function fetchCampaigns(category_id) {
-         $.ajax({
-            url: "/campaigns/", // Pass category_id as a query param
-            type: "GET",
-            data: { category: category_id },
-            dataType: "json",
-            success: function (response) {
-               let htmlContent = "";
-
-               if (response.campaigns.length > 0) {
-                  response.campaigns.forEach(function (datas) {
-                     htmlContent += `
+                  if (response.campaigns.length > 0) {
+                     response.campaigns.forEach(function (datas) {
+                        htmlContent += `
                              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                                  <div class="thumbnail">
                                      <a href="${datas.donation_url}">
@@ -688,169 +681,172 @@
                                      </div>
                                  </div>
                              </div>`;
-                  });
-               } else {
-                  htmlContent = `<div class="row ml-5"><h5 class="text-center">No Campaign Available</h5></div>`;
-               }
+                     });
+                  } else {
+                     htmlContent = `<div class="row ml-5"><h5 class="text-center">No Campaign Available</h5></div>`;
+                  }
 
-               $("#camp_" + category_id).html(htmlContent); // Update category div
-            },
-            error: function (xhr, status, error) {
-               console.log("Error fetching data:", error);
-            }
-         });
-      }
-
-   </script>
-
-   <script>
-      $(document).ready(function () {
-         $('[data-toggle="tooltip"]').tooltip({ 'placement': 'left', 'color': 'green' });
-      });
-   </script>
-   <script type="text/javascript">
-      $(document).ready(function () {
-         $(".mainmenu2 a").on("click", function () {
-            $(".mainmenu2").find(".active").removeClass("active");
-            $(this).parent().addClass("active");
-         });
-      });
-   </script>
-
-   <script type="text/javascript">
-      $(document).ready(function () {
-         $(".owl-carousel").owlCarousel({
-            //items:3,
-            autoplay: true,
-            margin: 30,
-            loop: true,
-            dots: true,
-            responsive: {
-               0: {
-                  items: 1
+                  $("#camp_" + category_id).html(htmlContent); // Update category div
                },
-               600: {
-                  items: 2
-               },
-               900: {
-                  items: 3
+               error: function (xhr, status, error) {
+                  console.log("Error fetching data:", error);
                }
-            }
-            //      nav:true,
-            //      navText:["<i class='fas fa-long-arrow-alt-left'></i>","<i class='fas fa-long-arrow-alt-right'></i>" ]
-         });
-      });
-   </script>
-   <script>
-      var items = $('.content-div.active').length
-
-      $(document).on('click', '#right_arrow', function (e) {
-         e.preventDefault();
-         $(".content-div.active").removeClass("active").next().addClass("active");
-      })
-      $(document).on('click', '#left_arrow', function (e) {
-         e.preventDefault();
-         $(".content-div").removeClass("active");
-         $('.content-div').prev().addClass("active");
-      })
-   </script>
-   <script>
-      $(document).on('click', '.donation_redirect_button', function (e) {
-         e.preventDefault();
-         var select = $('#donation_select');
-         var donationId = select.val();
-         var paymentPageUrl = $('#donation_select option[value="' + donationId + '"]').data('url');
-         var amount = $('.user_input_number').val();
-         window.location = paymentPageUrl + '?number=' + amount;
-      });
-
-   </script>
-
-   <!-- load all script -->
-
-
-   <script src="static/web/assets/common/js/bootstrap.min.js"></script>
-   <script src="static/web/assets/frontend/js/dynamic-script.js"></script>
-   <script src="static/web/assets/frontend/js/jquery.magnific-popup.js"></script>
-
-   <script src="static/web/assets/frontend/js/jquery.counterup.min.js"></script>
-   <script src="static/web/assets/frontend/js/owl.carousel.min.js"></script>
-   <script src="static/web/assets/frontend/js/jQuery.rProgressbar.min.js"></script>
-   <script src="static/web/assets/frontend/js/active.rProgressbar.js"></script>
-   <script src="static/web/assets/frontend/js/wow.min.js"></script>
-   <script src="static/web/assets/backend/js/sweetalert2.js"></script>
-   <script src="static/web/assets/frontend/js/imagesloaded.pkgd.min.js"></script>
-   <script src="static/web/assets/frontend/js/isotope.pkgd.min.js"></script>
-   <script src="static/web/assets/common/js/toastr.min.js"></script>
-   <script src="static/web/assets/frontend/js/slick.min.js"></script>
-   <!--<script src="/static/assets/backend/js/jquery.nice-select.min.js"></script>-->
-   <script src="static/web/assets/frontend/js/main.js"></script>
-   <script src="static/web/assets/frontend/js/main2.js"></script>
-   <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LdvUeQUAAAAAHKM02AWBjtKAAL0-"></script> -->
-   <script src="static/web/assets/frontend/js/jquery.popup.lightbox.js"></script>
-   <script src="static/web/assets/frontend/js/jquery.ihavecookies.min.js"></script>
-   <script src="static/web/assets/backend/js/dropzone.js"></script>
-
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-
-
-   <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-   </script>
-
-   <script>
-      function getCookie(cname) {
-         var name = cname + "=";
-         var decodedCookie = decodeURIComponent(document.cookie);
-         var ca = decodedCookie.split(';');
-         for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-               c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-               return c.substring(name.length, c.length);
-            }
+            });
          }
-         return "";
-      }
 
-      function setCookie(cname, cvalue, exdays) {
-         var d = new Date();
-         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-         var expires = "expires=" + d.toUTCString();
-         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-      }
+      </script>
 
-      (function ($) {
-         "use strict";
+      <script>
+         $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip({ 'placement': 'left', 'color': 'green' });
+         });
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function () {
+            $(".mainmenu2 a").on("click", function () {
+               $(".mainmenu2").find(".active").removeClass("active");
+               $(this).parent().addClass("active");
+            });
+         });
+      </script>
 
-         $(window).on('scroll', function () {
-
-            if ($(window).width() > 992) {
-               /*--------------------------
-               sticky menu activation
-              -------------------------*/
-               var st = $(this).scrollTop();
-               var mainMenuTop = $('.navbar-area');
-               if ($(window).scrollTop() > 1000) {
-                  // active sticky menu on scrollup
-                  mainMenuTop.addClass('nav-fixed');
-               } else {
-                  mainMenuTop.removeClass('nav-fixed ');
+      <script type="text/javascript">
+         $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+               //items:3,
+               autoplay: true,
+               margin: 30,
+               loop: true,
+               dots: true,
+               responsive: {
+                  0: {
+                     items: 1
+                  },
+                  600: {
+                     items: 2
+                  },
+                  900: {
+                     items: 3
+                  }
                }
-            }
+               //      nav:true,
+               //      navText:["<i class='fas fa-long-arrow-alt-left'></i>","<i class='fas fa-long-arrow-alt-right'></i>" ]
+            });
+         });
+      </script>
+      <script>
+         var items = $('.content-div.active').length
+
+         $(document).on('click', '#right_arrow', function (e) {
+            e.preventDefault();
+            $(".content-div.active").removeClass("active").next().addClass("active");
+         })
+         $(document).on('click', '#left_arrow', function (e) {
+            e.preventDefault();
+            $(".content-div").removeClass("active");
+            $('.content-div').prev().addClass("active");
+         })
+      </script>
+      <script>
+         $(document).on('click', '.donation_redirect_button', function (e) {
+            e.preventDefault();
+            var select = $('#donation_select');
+            var donationId = select.val();
+            var paymentPageUrl = $('#donation_select option[value="' + donationId + '"]').data('url');
+            var amount = $('.user_input_number').val();
+            window.location = paymentPageUrl + '?number=' + amount;
          });
 
+      </script>
+
+      <!-- load all script -->
 
 
-      }(jQuery));
+      <script src="static/web/assets/common/js/bootstrap.min.js"></script>
+      <script src="static/web/assets/frontend/js/dynamic-script.js"></script>
+      <script src="static/web/assets/frontend/js/jquery.magnific-popup.js"></script>
 
-   </script>
+      <script src="static/web/assets/frontend/js/jquery.counterup.min.js"></script>
+      <script src="static/web/assets/frontend/js/owl.carousel.min.js"></script>
+      <script src="static/web/assets/frontend/js/jQuery.rProgressbar.min.js"></script>
+      <script src="static/web/assets/frontend/js/active.rProgressbar.js"></script>
+      <script src="static/web/assets/frontend/js/wow.min.js"></script>
+      <script src="static/web/assets/backend/js/sweetalert2.js"></script>
+      <script src="static/web/assets/frontend/js/imagesloaded.pkgd.min.js"></script>
+      <script src="static/web/assets/frontend/js/isotope.pkgd.min.js"></script>
+      <script src="static/web/assets/common/js/toastr.min.js"></script>
+      <script src="static/web/assets/frontend/js/slick.min.js"></script>
+      <!--<script src="/static/assets/backend/js/jquery.nice-select.min.js"></script>-->
+      <script src="static/web/assets/frontend/js/main.js"></script>
+      <script src="static/web/assets/frontend/js/main2.js"></script>
+      <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LdvUeQUAAAAAHKM02AWBjtKAAL0-"></script> -->
+      <script src="static/web/assets/frontend/js/jquery.popup.lightbox.js"></script>
+      <script src="static/web/assets/frontend/js/jquery.ihavecookies.min.js"></script>
+      <script src="static/web/assets/backend/js/dropzone.js"></script>
 
-   <script src="static/web/assets/frontend/js/custom.script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+      <script>
+         document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+
+      <script>
+         function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+               var c = ca[i];
+               while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+               }
+               if (c.indexOf(name) == 0) {
+                  return c.substring(name.length, c.length);
+               }
+            }
+            return "";
+         }
+
+         function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+         }
+
+         (function ($) {
+            "use strict";
+
+            $(window).on('scroll', function () {
+
+               if ($(window).width() > 992) {
+                  /*--------------------------
+                  sticky menu activation
+                 -------------------------*/
+                  var st = $(this).scrollTop();
+                  var mainMenuTop = $('.navbar-area');
+                  if ($(window).scrollTop() > 1000) {
+                     // active sticky menu on scrollup
+                     mainMenuTop.addClass('nav-fixed');
+                  } else {
+                     mainMenuTop.removeClass('nav-fixed ');
+                  }
+               }
+            });
+
+
+
+         }(jQuery));
+
+      </script>
+
+      <script src="static/web/assets/frontend/js/custom.script.js"></script>
+
+
+   </footer>
 
 </body>
 

@@ -16,6 +16,11 @@
 
 .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li a {
     color: #29323D;
+    margin-left: 35px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    transition: all 0.4s ease;
 }
 
 .navbar-area .nav-container .navbar-collapse .navbar-nav li a:not(.dropdown-menu .dropdown-item) {
@@ -28,7 +33,7 @@
 }
 
 .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li {
-    line-height: 80px;
+    line-height: 50px;
 }
 
 .dropdown-menu .dropdown-item {
@@ -39,7 +44,7 @@
 }
 
 .dropdown-menu {
-    min-width: 16rem;
+    min-width: 200px !important;
 }
 
 .req-cam-btn {
@@ -104,6 +109,42 @@
 
     .logo-wrapper ul {
         margin-top: 20px;
+    }
+}
+
+
+/*========== Nav bar fix CSS ==========*/
+.navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li a:hover,
+.navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li a.active {
+    /* color: #FE6401; */
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 992px) {
+    .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li a {
+        margin-left: 0px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 40px;
+    }
+}
+
+/* Center-align navbar-nav text on web screens */
+@media only screen and (min-width: 993px) {
+    .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li {
+        line-height: 80px;
+        text-align: center;
+    }
+
+    .navbar-area.nav-style-01 .nav-container .navbar-collapse .navbar-nav li a {
+        margin-left: 0;
     }
 }
 
@@ -785,7 +826,7 @@ fieldset[disabled] .form-control .tab-content .form-group label {
 }
 
 .totalAmount p {
-    font-size: 20px;
+    font-size: 18px;
     margin: unset;
 }
 
@@ -815,6 +856,13 @@ fieldset[disabled] .form-control .tab-content .form-group label {
 .personalInfo p,
 .currentAddress p {
     margin: unset;
+}
+
+.currentAddress .notes_M {
+    width: 100%;
+    padding: 10px 10px;
+    margin-top: 10px;
+    background-color: lightyellow;
 }
 
 /* Toaster CSS */
@@ -1033,7 +1081,9 @@ fieldset[disabled] .form-control .tab-content .form-group label {
     transition: all 50ms ease-in;
 }
 
-.downloadBtn:hover {
+.downloadBtn:hover,
+.downloadBtn:active,
+.downloadBtn:focus {
     color: white;
     background-color: rgb(2, 98, 2);
     transition: all 50ms ease-in;
