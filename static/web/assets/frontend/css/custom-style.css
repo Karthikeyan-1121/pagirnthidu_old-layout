@@ -1291,6 +1291,26 @@ fieldset[disabled] .form-control .tab-content .form-group label {
     color: white;
 }
 
+.missionList .row {
+    border-bottom: 1px solid rgb(241, 236, 236);
+    padding-bottom: 50px;
+    transition: all 200ms ease-in;
+}
+
+.missionList .row:not(:first-child) {
+    margin-top: 50px;
+}
+
+.missionList .row:last-child {
+    border-bottom: 1px solid transparent;
+}
+
+.missionList .row:hover h5 {
+
+    transition: all 200ms ease-in;
+    text-decoration: underline;
+}
+
 .mission_listing_img img {
     height: 300px;
 }
@@ -1302,4 +1322,44 @@ fieldset[disabled] .form-control .tab-content .form-group label {
     align-items: center;
     justify-content: center;
     max-height: 450px;
+}
+
+@media only screen and (max-width:992px) {
+    .mission_listing_img img {
+        height: unset;
+        width: 100%;
+    }
+}
+
+.donation_count {
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(255, 253, 206);
+}
+
+.donation_count_zero {
+    background-color: #daffee;
+}
+
+.donation_count_zero img {
+    position: relative;
+    z-index: 0;
+}
+
+.donation_count_zero img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(237, 155, 14);
+    z-index: 2;
+}
+
+.mission_content h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2b2a35;
+    margin-top: 20px;
 }
