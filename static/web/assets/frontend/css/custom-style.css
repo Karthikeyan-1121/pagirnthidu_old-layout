@@ -1151,23 +1151,155 @@ fieldset[disabled] .form-control .tab-content .form-group label {
     margin: 0;
 }
 
+.mission_content .m_dNs {
+    display: flex;
+}
+
 .mission_content .m_donate {
+    margin-right: 12px;
+}
+
+.mission_content .m_donate,
+.mission_content .m_share {
     width: 150px;
 }
 
-.mission_content .donateBtn p {
+.mission_content .donateBtn p,
+.mission_content .shareBtn p {
     margin: unset;
     color: white;
     text-align: center;
     font-weight: 500;
 }
 
-.mission_content .donateBtn {
+.mission_content .shareBtn p {
+    color: #2b2a35;
+    margin-left: 10px;
+}
+
+.mission_content .donateBtn,
+.mission_content .shareBtn {
     background-color: #FE6401;
     border-radius: 7px;
     padding: 10px 0;
 }
 
+.mission_content .shareBtn {
+    background-color: transparent;
+    border: 1px solid #b9b8b8;
+}
+
 .supporter-container div:last-child {
     margin: unset;
+}
+
+/* Gallery CSS */
+.gallery-img {
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.modal-img {
+    max-height: 90vh;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    transition: transform 0.3s ease;
+    touch-action: none;
+    cursor: grab;
+}
+
+.modal-nav-btn {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    padding: 0.75rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1056;
+}
+
+.thumb-bar {
+    display: flex;
+    overflow-x: auto;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1055;
+}
+
+.thumb-bar img {
+    height: 60px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 2px solid transparent;
+}
+
+.thumb-bar img.active-thumb {
+    opacity: 1;
+    border-color: #fff;
+}
+
+#imageModal.modal.show .modal-dialog {
+    top: 0;
+}
+
+
+/* Mission listing CSS */
+.small_banner {
+    position: relative;
+    background-image: url(/static/web/assets/frontend/img/mission/ourMission_smallBG.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.small_banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(52, 33, 1, 0.655);
+    z-index: 2;
+}
+
+.small_banner>* {
+    position: relative;
+    z-index: 3;
+}
+
+
+.small_banner h1 {
+    font-weight: 700;
+}
+
+.small_banner h1,
+.small_banner p {
+    color: white;
+}
+
+.mission_listing_img img {
+    height: 300px;
+}
+
+.mission_listing_img {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 450px;
 }

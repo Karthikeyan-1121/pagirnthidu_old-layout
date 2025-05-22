@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en_GB" dir="ltr">
+
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="8xfNEyJT30kIl6CciEHvbbieJXAgPMH5M8r2rszy">
+    <meta name="description" content="this is multilingual example meta tag for english">
+    <meta name="tags" content="hello,meta,tag">
+    <link rel="shortcut icon" href="static/web/assets/uploads/media-uploader/favicon1698602001.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/line-awesome.min.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/fontawesome.min.css">
+    <link rel="stylesheet" href="static/web/assets/common/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/owltheme-defaults.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/animate.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/flaticon.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/popup-lightbox.css" />
+    <!-- <link rel="stylesheet" href="/static/assets/backend/css/nice-select.css"> -->
+    <link rel="stylesheet" href="static/web/assets/common/css/toastr.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/slick.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/style.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/custom-style.css">
+
+    <link rel="stylesheet" href="static/web/assets/frontend/css/faqaccordion.css/">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/responsive.css">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/jquery.ihavecookies.css/">
+    <link rel="stylesheet" href="static/web/assets/frontend/css/dynamic-style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:wght@100;300;400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script src="static/web/assets/frontend/js/jquery-3.4.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="static/web/assets/frontend/js/jquery.dataTables.min.js"></script>
+
+
+    <meta property="og:title" content="Pagirnthidu Foundation" />
+    <meta property="og:image" content="" />
+    <title>Pagirnthidu Foundation - Crowd Funding</title>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-area navbar-expand-lg has-topbar nav-style-01">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <div class="logo-wrapper">
+                        <a href="/" class="logo">
+                            <img class="logo" src="static/web/assets/frontend/img/Pagirnthidu%20Logo.svg" />
+                        </a>
+                        <div class="btn-resp d-lg-none">
+                            <ul>
+                                <li>
+                                    <a id="loginBtn" href="#">Login / Sign-up</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
+                    <ul class="navbar-nav text-center">
+                        <li>
+                            <a href="#home">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        <li>
+                            <a href="/donation/">
+                                Campaigns
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/our-mission/">
+                                Our Missions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/our-mission/">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <div class="dropdown req-cam-btn">
+                                <a class="dropdown-toggle" href="" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">Requests
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="req-cam-btn dropdown-item" href="/request-campaign/">Request a
+                                        Campaign</a>
+                                    <a class="req-cam-btn dropdown-item" href="/request-volunteer/">Request a
+                                        volunteer</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right-content d-lg-inline d-none">
+                    <ul>
+                        <li>
+                            <a id="loginBtn" href="#">Login / Sign-up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Image Starts -->
+    <section class="mission_banner_sec pb-5">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mission_banner_img">
+                        <img class="w-100" src="static/web/assets/frontend/img/mission/educationForAll.jpg" alt="#">
+                        <div class="mission_title">
+                            <h3>#Education</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="mission_content">
+                        <h2>Education For All</h2>
+                        <p class="mb-3">Join us in our mission to empower minds and create lasting change through
+                            learning. Your support can open doors of opportunity for children and young adults in
+                            underserved communities. Together, we can break the cycle of poverty and build a brighter,
+                            more equitable future. Be part of this journey of knowledge and transformation.
+                        </p>
+                        <h3>What we do</h3>
+                        <ul class="missiondetlist p-0">
+                            <li>
+                                <img src="/static/web/assets/frontend/img/mission/check-circle-broken.png">
+                                Provide essential learning materials and resources
+                            </li>
+                            <li>
+                                <img src="/static/web/assets/frontend/img/mission/check-circle-broken.png">
+                                Sponsor educational programs and scholarships
+                            </li>
+                            <li>
+                                <img src="/static/web/assets/frontend/img/mission/check-circle-broken.png">
+                                Support schools and teachers in need
+                            </li>
+                        </ul>
+                        <div class="m_dNs">
+                            <div class="m_donate">
+                                <a href="donate-now.html">
+                                    <div class="donateBtn">
+                                        <p>Donate Now</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="m_share">
+                                <a href="#" data-toggle="modal" data-target="#myModal">
+                                    <div class="shareBtn d-flex align-items-center justify-content-center">
+                                        <div class="d-flex align-items-center">
+                                            <img src="static/web/assets/frontend/img/share-ico.svg" alt="share">
+                                            <p>Share</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-inline">
+                    <img class="img-fluid" src="static/web/assets/frontend/img/mission/education-ico.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container my-4">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="mb-3">Recent Activities</h4>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carouselInner">
+                        <!-- JS will generate slides here -->
+                    </div>
+
+                    <!-- Carousel controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content bg-dark text-center">
+                    <div
+                        class="modal-body d-flex align-items-center justify-content-center position-relative overflow-hidden">
+                        <!-- Navigation -->
+                        <button id="prevBtn"
+                            class="modal-nav-btn position-absolute start-0 top-50 translate-middle-y">&#x25C0;</button>
+                        <div id="zoomContainer" class="d-flex justify-content-center">
+                            <img id="modalImg" src="" class="modal-img img-fluid d-block" alt="Large View" />
+                        </div>
+                        <button id="nextBtn"
+                            class="modal-nav-btn position-absolute end-0 top-50 translate-middle-y">&#x25B6;</button>
+
+                        <!-- Thumbnail Bar -->
+                        <div class="thumb-bar" id="thumbBar"></div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                        data-bs-dismiss="modal"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="mb-3">Supporters (2)</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer class="footer-area footersec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <a href="/"><img width="120px" src="static/web/assets/frontend/img/Pagirnthidu%20Logo-wh.svg" /></a>
+                    <p>India's first charitable trust with a vision to uplift aspiring individuals only who have the
+                        capability and the willingness to help others.</p>
+                    <a href="/login/" class="button">Login/SignUp</a>
+                </div>
+                <!-- end col1 -->
+                <div class="col-lg-3">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>+91 98765432210</li>
+                        <li><a href="mailto:help@pagirnthidu.in">help@pagirnthidu.in</a></li>
+                        <li>523/2,Udayampalayam Road, Nava India, Coimbatore, Tamil Nadu 641028.</li>
+                    </ul>
+                </div>
+                <!-- end col2 -->
+                <div class="col-lg-3">
+                    <h3>Donors</h3>
+                    <ul>
+                        <li><a href="/donation/">Browse Campaigns</a></li>
+                        <li><a href="/our-mission/">Monthly Mission</a></li>
+                        <li><a href="/about#testimonials">Testimonials</a></li>
+                        <li><a href="/about#faqsec">FAQS</a></li>
+                    </ul>
+                </div>
+                <!-- end col3 -->
+                <div class="col-lg-3">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="/about/">Our Story</a></li>
+                        <li><a href="/contact/">Contact Us</a></li>
+                        <li><a href="/terms-condition/">Terms of Use</a></li>
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- end col4 -->
+            </div>
+            <!-- end row -->
+            <hr>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <ul class="social_links">
+                        <li><a href=""><i class=""><img width="14px"
+                                        src="static/web/assets/frontend/img/twitter.png" /></i></a></li>
+                        <li><a href="https://m.facebook.com/pagirnthidu/" target="_blank"><i
+                                    class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://in.linkedin.com/showcase/pagirnthidu/" target="_blank"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <!-- end col -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <p>Copyright © <span id="year"></span> Pagirnthidu by <a href="https://www.grouppal.com/"
+                            target="_blank" class="link">GroupPal</a>. All Rights Reserved.</p>
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+
+
+        <!-- scripts -->
+
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip({ 'placement': 'left', 'color': 'green' });
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".mainmenu2 a").on("click", function () {
+                    $(".mainmenu2").find(".active").removeClass("active");
+                    $(this).parent().addClass("active");
+                });
+            });
+        </script>
+
+        <script>
+            var items = $('.content-div.active').length
+
+            $(document).on('click', '#right_arrow', function (e) {
+                e.preventDefault();
+                $(".content-div.active").removeClass("active").next().addClass("active");
+            })
+            $(document).on('click', '#left_arrow', function (e) {
+                e.preventDefault();
+                $(".content-div").removeClass("active");
+                $('.content-div').prev().addClass("active");
+            })
+        </script>
+        <script>
+            $(document).on('click', '.donation_redirect_button', function (e) {
+                e.preventDefault();
+                var select = $('#donation_select');
+                var donationId = select.val();
+                var paymentPageUrl = $('#donation_select option[value="' + donationId + '"]').data('url');
+                var amount = $('.user_input_number').val();
+                window.location = paymentPageUrl + '?number=' + amount;
+            });
+
+        </script>
+
+        <!-- load all script -->
+
+
+        <script src="static/web/assets/common/js/bootstrap.min.js"></script>
+        <script src="static/web/assets/frontend/js/dynamic-script.js"></script>
+        <script src="static/web/assets/frontend/js/jquery.magnific-popup.js"></script>
+
+        <script src="static/web/assets/frontend/js/jquery.counterup.min.js"></script>
+        <script src="static/web/assets/frontend/js/owl.carousel.min.js"></script>
+        <script src="static/web/assets/frontend/js/jQuery.rProgressbar.min.js"></script>
+        <script src="static/web/assets/frontend/js/active.rProgressbar.js"></script>
+        <script src="static/web/assets/frontend/js/wow.min.js"></script>
+        <script src="static/web/assets/backend/js/sweetalert2.js"></script>
+        <script src="static/web/assets/frontend/js/imagesloaded.pkgd.min.js"></script>
+        <script src="static/web/assets/frontend/js/isotope.pkgd.min.js"></script>
+        <script src="static/web/assets/common/js/toastr.min.js"></script>
+        <script src="static/web/assets/frontend/js/slick.min.js"></script>
+        <!--<script src="/static/assets/backend/js/jquery.nice-select.min.js"></script>-->
+        <script src="static/web/assets/frontend/js/main.js"></script>
+        <script src="static/web/assets/frontend/js/main2.js"></script>
+        <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LdvUeQUAAAAAHKM02AWBjtKAAL0-"></script> -->
+        <script src="static/web/assets/frontend/js/jquery.popup.lightbox.js"></script>
+        <script src="static/web/assets/frontend/js/jquery.ihavecookies.min.js"></script>
+        <script src="static/web/assets/backend/js/dropzone.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+
+        <script>
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            (function ($) {
+                "use strict";
+
+                $(window).on('scroll', function () {
+
+                    if ($(window).width() > 992) {
+                        /*--------------------------
+                        sticky menu activation
+                       -------------------------*/
+                        var st = $(this).scrollTop();
+                        var mainMenuTop = $('.navbar-area');
+                        if ($(window).scrollTop() > 1000) {
+                            // active sticky menu on scrollup
+                            mainMenuTop.addClass('nav-fixed');
+                        } else {
+                            mainMenuTop.removeClass('nav-fixed ');
+                        }
+                    }
+                });
+
+
+
+            }(jQuery));
+
+        </script>
+
+
+        <!-- Gallery Script -->
+        <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+        <script>
+            const images = [
+                "https://picsum.photos/id/1015/1200/800",
+                "https://picsum.photos/id/1016/1200/800",
+                "https://picsum.photos/id/1018/1200/800",
+                "https://picsum.photos/id/1020/1200/800",
+                "https://picsum.photos/id/1021/1200/800",
+                "https://picsum.photos/id/1024/1200/800",
+                "https://picsum.photos/id/1025/1200/800",
+                "https://picsum.photos/id/1033/1200/800"
+            ];
+
+            const carouselInner = document.getElementById("carouselInner");
+
+            function createCarousel() {
+                carouselInner.innerHTML = "";  // Clear old content
+
+                // Determine items per slide based on viewport width
+                const itemsPerSlide = window.innerWidth < 768 ? 2 : 4;
+
+                let slide;
+                images.forEach((src, index) => {
+                    if (index % itemsPerSlide === 0) {
+                        slide = document.createElement("div");
+                        slide.className = `carousel-item${index === 0 ? " active" : ""}`;
+                        const row = document.createElement("div");
+                        row.className = "row g-3";
+                        slide.appendChild(row);
+                        carouselInner.appendChild(slide);
+                    }
+
+                    const col = document.createElement("div");
+
+                    // Set bootstrap cols so that images take half width on mobile, quarter width on md+
+                    if (itemsPerSlide === 2) {
+                        col.className = "col-6";  // 2 per row on mobile
+                    } else {
+                        col.className = "col-6 col-md-3"; // 4 per row on md+
+                    }
+
+                    col.innerHTML = `<img loading="lazy" src="${src.replace('/1200/800', '/600/400')}" class="gallery-img" data-index="${index}" alt="Gallery Image">`;
+                    slide.querySelector(".row").appendChild(col);
+                });
+
+                // Reattach event listeners for modal opening
+                document.querySelectorAll('.gallery-img').forEach((img, index) => {
+                    img.addEventListener('click', () => showImage(index));
+                });
+            }
+
+            // Run on initial load
+            createCarousel();
+
+            // Optional: Rebuild carousel on window resize (debounce for performance)
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    createCarousel();
+                }, 200);
+            });
+
+
+
+            let currentIndex = 0;
+            const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+            const modalImg = document.getElementById("modalImg");
+            const thumbBar = document.getElementById("thumbBar");
+            let panzoomInstance = null;
+
+            function updateThumbnails() {
+                thumbBar.innerHTML = "";
+                images.forEach((src, index) => {
+                    const thumb = document.createElement("img");
+                    thumb.src = src;
+                    if (index === currentIndex) thumb.classList.add("active-thumb");
+                    thumb.addEventListener("click", () => {
+                        currentIndex = index;
+                        loadImage(currentIndex);
+                    });
+                    thumbBar.appendChild(thumb);
+                });
+            }
+
+            function loadImage(index) {
+                modalImg.src = images[index];
+                modalImg.onload = () => {
+                    if (panzoomInstance) panzoomInstance.destroy();
+
+                    const zoomContainer = document.getElementById("zoomContainer");
+                    zoomContainer.innerHTML = "";
+                    zoomContainer.appendChild(modalImg);
+
+                    panzoomInstance = Panzoom(modalImg, {
+                        maxScale: 5,
+                        minScale: 1,
+                        contain: "outside",
+                        startScale: 1
+                    });
+
+                    zoomContainer.addEventListener("wheel", panzoomInstance.zoomWithWheel);
+                    updateThumbnails();
+                };
+            }
+
+            function showImage(index) {
+                currentIndex = index;
+                loadImage(currentIndex);
+                modal.show();
+            }
+
+            document.querySelectorAll(".gallery-img").forEach((img, index) => {
+                img.addEventListener("click", () => showImage(index));
+            });
+
+            document.getElementById("prevBtn").addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                loadImage(currentIndex);
+            });
+
+            document.getElementById("nextBtn").addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                loadImage(currentIndex);
+            });
+
+            // Hammer.js gestures
+            const hammer = new Hammer(document.getElementById("zoomContainer"));
+            hammer.get("swipe").set({ direction: Hammer.DIRECTION_HORIZONTAL });
+            hammer.get("tap").set({ taps: 2 });
+
+            hammer.on("swipeleft", () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                loadImage(currentIndex);
+            });
+
+            hammer.on("swiperight", () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                loadImage(currentIndex);
+            });
+
+            hammer.on("doubletap", () => {
+                if (!panzoomInstance) return;
+                const scale = panzoomInstance.getScale();
+                if (scale <= 1.1) {
+                    panzoomInstance.zoomTo(0, 0, 2);
+                } else {
+                    panzoomInstance.reset();
+                }
+            });
+
+            // Keyboard arrows
+            document.addEventListener("keydown", (e) => {
+                if (!document.getElementById("imageModal").classList.contains("show")) return;
+                if (e.key === "ArrowLeft") {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    loadImage(currentIndex);
+                }
+                if (e.key === "ArrowRight") {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    loadImage(currentIndex);
+                }
+            });
+        </script>
+        <!-- Gallery Script Ends-->
+
+
+
+
+        <script src="static/web/assets/frontend/js/custom.script.js"></script>
+
+    </footer>
+
+
+</body>
