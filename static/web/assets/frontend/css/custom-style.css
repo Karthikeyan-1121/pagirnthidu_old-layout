@@ -639,17 +639,21 @@
     margin-bottom: 20px;
 }
 
-.tab-content .form-group input {
+.tab-content .form-group input,
+#contact_us_form .form-group input {
     margin-bottom: 15px;
 }
 
-.tab-content label {
+.tab-content label,
+#contact_us_form label {
     font-weight: 400;
     margin-bottom: 0;
 }
 
 .tab-content .form-control,
-.tab-content .form-select {
+.tab-content .form-select,
+#contact_us_form .form-control:not(textarea),
+#contact_us_form .form-select {
     display: block;
     width: 100%;
     height: 40px;
@@ -658,7 +662,7 @@
     font-weight: 600;
     line-height: 1.42857143;
     color: #555;
-    background-color: #fff;
+    background-color: transparent;
     background-image: none;
     border: unset;
     border-bottom: 1px solid #ccc;
@@ -668,6 +672,14 @@
     -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#contact_us_form .form-control {
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+    padding: 0 0 6px 0px;
+    border-bottom: 1px solid #ccc;
 }
 
 .tab-content input[type=text]:focus,
@@ -681,7 +693,20 @@
 .tab-content input[type=button]:focus,
 .tab-content input[type=reset]:focus,
 .tab-content input[type=submit]:focus,
-.tab-content select:focus {
+.tab-content select:focus,
+
+#contact_us_form input[type=text]:focus,
+#contact_us_form input[type=email]:focus,
+#contact_us_form input[type=url]:focus,
+#contact_us_form input[type=password]:focus,
+#contact_us_form input[type=search]:focus,
+#contact_us_form input[type=tel]:focus,
+#contact_us_form input[type=number]:focus,
+#contact_us_form textarea:focus,
+#contact_us_form input[type=button]:focus,
+#contact_us_form input[type=reset]:focus,
+#contact_us_form input[type=submit]:focus,
+#contact_us_form select:focus {
     outline: none;
     box-shadow: none;
     border: unset;
@@ -1142,6 +1167,7 @@ fieldset[disabled] .form-control .tab-content .form-group label {
     position: absolute;
     text-align: center;
     bottom: 0;
+    display: none;
 }
 
 .mission_title h3 {
@@ -1258,7 +1284,6 @@ fieldset[disabled] .form-control .tab-content .form-group label {
 /* Mission listing CSS */
 .small_banner {
     position: relative;
-    background-image: url(/static/web/assets/frontend/img/mission/ourMission_smallBG.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1362,4 +1387,96 @@ fieldset[disabled] .form-control .tab-content .form-group label {
     font-weight: 600;
     color: #2b2a35;
     margin-top: 20px;
+}
+
+/* Contact Us CSS */
+.contact_medium {
+    background-color: white;
+}
+
+.contact_medium .row {
+    padding: 40px;
+    border: 1px solid #ececed;
+    border-radius: 20px;
+    margin: 5px;
+    /*  gap: 20px; */
+}
+
+@media only screen and (max-width:992px) {
+    .contact_medium .row {
+        gap: 20px;
+        padding: 20px 10px;
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .contact_medium {
+        padding: 1.2rem 0;
+    }
+}
+
+.contact_fields {
+    display: flex;
+    align-items: start;
+}
+
+.contact_fields img {
+    width: 45px;
+    height: 45px;
+}
+
+.contact_title {
+    margin-left: 20px;
+}
+
+.contact_title h6 {
+    font-size: 20px;
+}
+
+.contact_title p {
+    margin: unset;
+    font-size: 18px;
+}
+
+.contact_mapNfield .contactbg {
+    background-color: #ffffff;
+    padding: 80px;
+    border-radius: unset;
+    border: 1px transparent solid;
+    margin: unset;
+}
+
+.contact_mapNfield .contactbg h2 {
+    margin-bottom: 20px;
+}
+
+.contact_mapNfield ._map {
+    border-left: 1px solid rgba(60, 106, 0, 0.284);
+    border-top: 2px solid rgba(106, 94, 0, 0.111);
+    border-bottom: 2px solid rgba(60, 106, 0, 0.284);
+}
+
+#contact_us_form {
+    margin-bottom: unset !important;
+}
+
+@media only screen and (max-width:762px) {
+    .contact_mapNfield .contactbg {
+        padding: 40px;
+    }
+
+    .contact_mapNfield .contactbg h2 {
+        font-size: 28px;
+    }
+}
+
+#contact_us_form .submit {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #FE6401;
+    color: white;
+    border-color: transparent;
+    padding: 10px;
+    font-weight: 500;
 }
